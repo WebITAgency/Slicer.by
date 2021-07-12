@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
+.home-btn {
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.home-btn:hover, .btn-container__menu:hover, .btn-container__search:hover {
+  transition: all 0.3s linear;
+  color: #FD7E14;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -56,3 +67,4 @@ body {
   font-size: 25px;
   margin-left: 5px;
 }
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");

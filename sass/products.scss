@@ -1,0 +1,11 @@
+@import "var.scss";
+.home-btn{
+    color: $slicer-background;
+    font-size: 18px;
+    cursor: pointer;
+}
+.home-btn:hover, .btn-container__menu:hover, .btn-container__search:hover{
+    transition: all 0.3s linear;
+    color: $slicer-highlight;
+}
+
