@@ -40,3 +40,43 @@ body{
     align-items: center;
     background-color: $slicer-red-dark;
 }
+
+.phonenumber{
+    cursor: pointer;
+    color: $slicer-background;
+    display: flex;
+    text-decoration: none;
+    transition: 0.3s all ease;
+    &__icon{
+        font-size: 13px; 
+        display: flex; 
+        align-items: center;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+    &__text{
+        text-decoration: underline;
+    }
+    &:hover{
+        color: $slicer-highlight;
+    }
+}
+
+.btn-container{
+    transition: 0.3s all ease;
+    display: flex;
+    align-items: center;
+    color: $slicer-background;
+}
+
+.btn-container__search{
+    cursor: pointer;
+    font-size: 15px;
+    
+}
+
+.btn-container__menu{
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 5px;
+}
