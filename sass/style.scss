@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap');
 
+@mixin btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $slicer-red-dark;
+    color: $slicer-background;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
 
 $slicer-red: #B02A37;
 $slicer-background: #ffffff;
