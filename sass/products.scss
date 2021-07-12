@@ -1,4 +1,7 @@
 @import "var.scss";
+body{
+    background-color: $slicer-page-background;
+}
 .home-btn{
     color: $slicer-background;
     font-size: 18px;
@@ -8,4 +11,159 @@
     transition: all 0.3s linear;
     color: $slicer-highlight;
 }
+.catalog{
+    width: 100%;
+    flex-direction: column;
+    .catalog__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $slicer-background;
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0em;
+        height: 70px;
+        background-color: $slicer-red;
+        width: 100%;
+        transition: all 0.3s linear;
+        &:hover{
+            background-color: $slicer-highlight;
+        }
+    }
+    .catalog__menu{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0 !important;
+        margin: 0 !important;
+        .menu__item{
+            flex-direction: column;
+            width: 50%;
+            height: 120px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $slicer-red;
+            border-top: 1px solid $slicer-background;
+            border-bottom: 1px solid $slicer-background;
+            transition: all 0.3s linear;
+            cursor: pointer;
+            &:first-child, &:nth-child(2){
+                border-top: none;
+                border-bottom: none;
+            }
+            &:nth-child(3), &:last-child{
+                border-bottom: none;
+            }
+            &:hover{
+                background-color: $slicer-highlight;
+            }
+            span{
+                font-family: Ubuntu;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 21px;
+                letter-spacing: 0em;
+                color: #ffffff;
+            }
+            img{
+                width: 50px;
+            }
+            &:nth-child(odd){
+                border-right: 1px solid $slicer-background;
+            }
+        }
+    }
+}
 
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $slicer-page-background;
+    .products__navigation{
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        .item{
+            font-family: Nunito Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-decoration: underline;
+            color: $slicer-black;
+            transition: all 0.3s linear;
+            &:hover{
+                color: $slicer-highlight;
+            }
+        }
+        .arrow{
+            font-size: 15px;
+            color: $slicer-highlight;
+            margin: 0 7px;
+        }
+    }
+
+    .products__container{
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .product-item{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 325px;
+            // height: 440px; ПО РУКАМ НАХУЙ ЗА СТАТИЧНУЮ ВЫСОТУ!!!!!!
+            border-radius: 15px;
+            background-color: $slicer-background;
+            // justify-content: space-around;
+            align-items: center;
+            &__price{
+                margin-bottom: 15px;
+                font-family: 'Nunito Sans', sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+                color: $slicer-black;
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+            .line{
+                width: 90%;
+                height: 1px;
+                background-color: $slicer-black;
+                opacity: 0.05;
+                margin-bottom: 15px;
+            }
+            img{
+                width: 225px;
+                border-radius: 15px;
+                margin-bottom: 25px;
+            }
+            h2{
+                font-family: Roboto Slab;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: 0em;
+                color: $slicer-black;
+                margin-bottom: 25px;
+            }
+            &__btn{
+                @include btn;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
