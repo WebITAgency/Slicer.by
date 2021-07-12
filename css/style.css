@@ -1,3 +1,55 @@
-.aboba {
-  border: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  min-width: 375px;
+}
+
+.header {
+  color: #ffffff;
+  height: 50px;
+  background-color: #B02A37;
+}
+.header__row {
+  height: 100%;
+}
+
+.phonenumber {
+  transition: 0.3s all ease;
+  color: #ffffff;
+  text-decoration: none;
+}
+.phonenumber:hover {
+  color: #FD7E14;
+}
+.phonenumber__icon {
+  font-size: 13px;
+}
+.phonenumber__text {
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.menu-btn {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.menu-btn:hover {
+  color: #FD7E14;
+}
+
+.search-btn {
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.search-btn:hover {
+  color: #FD7E14;
 }
