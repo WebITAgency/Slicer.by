@@ -1,4 +1,7 @@
 @import "var.scss";
+@import "slider.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";  
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 * {
   padding: 0px;
@@ -164,16 +167,3 @@ body {
   transition: all 0.3s linear;
 }
 
-.slider {
-  margin-top: -20px;
-  z-index: 10;
-  position: relative;
-  &__container {
-    height: 340px;
-    background-color: red;
-    border-radius: 15px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-  }
-}

@@ -1,0 +1,14 @@
+.slider {
+    margin-top: -20px;
+    z-index: 10;
+    position: relative;
+    &__container {
+      height: 340px;
+      background-color: red;
+      border-radius: 15px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  
