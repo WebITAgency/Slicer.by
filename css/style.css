@@ -1,4 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 0px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #DC3545;
+  position: relative;
+}
+.header .mobile-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B02A37;
+}
+.header .mobile-menu .mobile-menu__search-form {
+  margin: 50px 0;
+  display: flex;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__button {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B02A37;
+  border: none;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__button i {
+  font-size: 24px;
+  color: #ffffff;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__input {
+  width: 240px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: #747171;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.header .mobile-menu .mobile-menu__link {
+  margin-top: 30px;
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header .mobile-menu .mobile-menu__link:hover {
+  font-weight: 500;
+}
+.header .mobile-menu .mobile-menu__link:nth-child(4) {
+  text-decoration: underline;
+}
+.header .mobile-menu .mobile-menu__link:first-child {
+  margin-top: 50px;
+}
+
+.phonenumber {
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+.phonenumber__icon {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.phonenumber__text {
+  text-decoration: underline;
+}
+.phonenumber:hover {
+  color: #FD7E14;
+}
+
+.btn-container {
+  transition: 0.3s all ease;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.btn-container__search {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-container__menu {
+  cursor: pointer;
+  font-size: 25px;
+  margin-left: 5px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
 body {
   background-color: #F6F6F6;
 }
@@ -219,92 +326,45 @@ body {
   display: none;
 }
 
-.header {
-  width: 100%;
-  height: 50px;
-  padding: 0px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #DC3545;
-  position: relative;
-}
-.header .mobile-menu {
-  display: none;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 50px;
-  flex-direction: column;
-  align-items: center;
-  background-color: #B02A37;
-}
-.header .mobile-menu .mobile-menu__search-form {
-  margin: 50px 0;
-  display: flex;
-}
-.header .mobile-menu .mobile-menu__search-form .search-form__button {
-  margin-left: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #B02A37;
-  border: none;
-}
-.header .mobile-menu .mobile-menu__search-form .search-form__button i {
-  font-size: 24px;
-  color: #ffffff;
-}
-.header .mobile-menu .mobile-menu__search-form .search-form__input {
-  width: 240px;
-  height: 50px;
-  border-radius: 25px;
-  border: none;
-  color: #747171;
-  font-family: Nunito Sans;
-  font-size: 16px;
-  padding-left: 10px;
-}
-.header .mobile-menu .mobile-menu__link {
-  margin-top: 30px;
-  font-family: Nunito Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0em;
-  transition: all 0.3s linear;
-  text-decoration: none;
-  color: #ffffff;
-}
-.header .mobile-menu .mobile-menu__link:hover {
-  font-weight: 500;
-}
-.header .mobile-menu .mobile-menu__link:nth-child(4) {
-  text-decoration: underline;
-}
-.header .mobile-menu .mobile-menu__link:first-child {
-  margin-top: 50px;
+.title {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.phonenumber {
+.logo {
+  width: 212px;
   cursor: pointer;
-  color: #ffffff;
+  user-select: none;
+}
+
+.phonenumber_title {
+  margin-top: 20px;
+  color: #030303;
+}
+
+.insta {
+  color: #030303;
   display: flex;
   text-decoration: none;
   transition: 0.3s all ease;
+  margin-top: 10px;
 }
-.phonenumber__icon {
-  font-size: 13px;
+.insta__icon {
+  font-size: 16px;
   display: flex;
   align-items: center;
   text-decoration: none;
   margin-right: 5px;
 }
-.phonenumber__text {
-  text-decoration: underline;
+.insta__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
 }
-.phonenumber:hover {
+.insta:hover {
   color: #FD7E14;
 }
 
