@@ -1,3 +1,6 @@
+@import "var.scss";
+
+
 .slider {
     margin-top: -20px;
     z-index: 10;
@@ -9,6 +12,49 @@
       cursor: pointer;
       overflow: hidden;
       position: relative;
+      padding: 0 !important;
+    }
+    &__item{
+        div{
+            width: 100%;
+            height: 340px;
+            background-color: blue;
+        }
+    }
+    &__controls{
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        z-index: 100;
+    }
+    &__side-btn{
+        color: $slicer-background;
+        font-size: 30px;
+        background: none;
+	    border: none;
+	    cursor: pointer;
+	    outline: inherit;
+        transition: 0.3s all ease;
+        &:hover{
+            color: $slicer-highlight;
+        }
+    }
+    &__topic-btn{
+        text-decoration: none;
+        color: $slicer-background;
+        padding: 10px 60px;
+        background-color: $slicer-red;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+        margin: 0 20px;
+        &:hover{
+            background-color: $slicer-highlight;
+            text-decoration: none;
+            color: $slicer-background;
+        }
     }
   }
-  
