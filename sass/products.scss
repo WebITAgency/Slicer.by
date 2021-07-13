@@ -87,6 +87,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: $slicer-page-background;
+    padding-bottom: 50px;
     .products__navigation{
         margin: 30px 0;
         display: flex;
@@ -107,7 +108,7 @@ body{
         }
         .arrow{
             font-size: 15px;
-            color: $slicer-highlight;
+            color: $slicer-black;
             margin: 0 7px;
         }
     }
@@ -164,6 +165,22 @@ body{
                 @include btn;
                 margin-bottom: 30px;
             }
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    background-color: $slicer-background;
+    padding: 30px 0;
+    .partners{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .partners__item{
+            height: 30px;
+            margin: 30px 0 15px 0;
         }
     }
 }

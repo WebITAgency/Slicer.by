@@ -90,6 +90,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
+  padding-bottom: 50px;
 }
 .products .products__navigation {
   margin: 30px 0;
@@ -112,7 +113,7 @@ body {
 }
 .products .products__navigation .arrow {
   font-size: 15px;
-  color: #FD7E14;
+  color: #030303;
   margin: 0 7px;
 }
 .products .products__container {
@@ -184,6 +185,22 @@ body {
   background: linear-gradient(90deg, #FD7E14 0%, #FFA51F 100%);
   color: #030303;
 }
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px 0;
+}
+.footer .partners {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer .partners .partners__item {
+  height: 30px;
+  margin: 30px 0 15px 0;
+}
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300;400;500&display=swap");
 * {
   padding: 0px;
@@ -202,6 +219,65 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #DC3545;
+  position: relative;
+}
+.header .mobile-menu {
+  transition: all 0.3s linear;
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B02A37;
+}
+.header .mobile-menu .mobile-menu__search-form {
+  margin: 50px 0;
+  display: flex;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__button {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B02A37;
+  border: none;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__button i {
+  font-size: 24px;
+  color: #ffffff;
+}
+.header .mobile-menu .mobile-menu__search-form .search-form__input {
+  width: 240px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: #747171;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.header .mobile-menu .mobile-menu__link {
+  margin-top: 30px;
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header .mobile-menu .mobile-menu__link:hover {
+  font-weight: 500;
+}
+.header .mobile-menu .mobile-menu__link:nth-child(4) {
+  text-decoration: underline;
+}
+.header .mobile-menu .mobile-menu__link:first-child {
+  margin-top: 50px;
 }
 
 .phonenumber {
