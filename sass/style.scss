@@ -12,6 +12,9 @@ body{
 .open{
     display: flex;
 }
+.close{
+    display: none;
+}
 
 .header{
     width: 100%;
@@ -23,7 +26,6 @@ body{
     background-color: $slicer-red-dark;
     position: relative;
     .mobile-menu{
-        transition: all 0.3s linear;
         display: none;
         width: 100%;
         position: absolute;
@@ -120,6 +122,7 @@ body{
     cursor: pointer;
     font-size: 25px;
     margin-left: 5px;
+    transition: all 0.3s linear;
 }
 
 .title{
