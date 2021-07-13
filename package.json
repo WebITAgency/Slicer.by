@@ -22,6 +22,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.0.0",
     "sass": "^1.35.2"

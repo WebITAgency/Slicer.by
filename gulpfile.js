@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');
+var beautify = require('gulp-beautify');
 
 function buildStyles() {
   return gulp.src('./sass/*.scss')
@@ -15,3 +16,24 @@ exports.buildStyles = buildStyles;
 exports.watch = function () {
   gulp.watch('./sass/*.scss', ['sass']);
 };
+
+gulp.task('beautify-css', function() {
+  return gulp
+    .src('./sass/*.scss')
+    .pipe(beautify.css({ indent_size: 2 }))
+    .pipe(gulp.dest('./sass/'));
+});
+
+gulp.task('beautify-html', function() {
+  return gulp
+    .src('./*.html')
+    .pipe(beautify.html({ indent_size: 2 }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('beautify-js', function() {
+  return gulp
+    .src('./script/*.js')
+    .pipe(beautify.js({ indent_size: 2 }))
+    .pipe(gulp.dest('./script/'));
+});
