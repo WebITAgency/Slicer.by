@@ -1,1 +1,85 @@
 @import "var.scss";
+
+.info__description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  background-color: $slicer-page-background;
+
+  h1 {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: $slicer-red-dark;
+  }
+
+  p {
+    margin: 20px 0;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: $slicer-light-text;
+  }
+
+  .info__parameters {
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    .parameters__item {
+      display: flex;
+      align-items: center;
+      color: $slicer-light-text;
+      font-size: 16px;
+
+      i {
+        font-size: 25px;
+        color: $slicer-light-text;
+      }
+    }
+  }
+
+  .info__link {
+    color: $slicer-light-text;
+    margin: 20px 0;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $slicer-red-dark;
+    }
+  }
+}
+
+.recommendations {
+  background-color: $slicer-page-background;
+  text-align: center;
+
+  h2 {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    color: $slicer-black;
+  }
+
+  .recommendation__link {
+    justify-self: flex-start;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: $slicer-light-text;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $slicer-red-dark;
+    }
+  }
+}
