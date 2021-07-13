@@ -72,13 +72,51 @@
       </a>
     </div>
 
-   <div class="container-fluid slider">
+   <!-- <div class=" container-fluid slider">
      <div class="row justify-content-center">
-       <div class="col-10 col-lg-8 slider__container"></div>
+       <div class="col-10 col-lg-8 slider__container glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">1</li>
+            <li class="glide__slide">2</li>
+            <li class="glide__slide">3</li>
+          </ul>
+        </div>
+        <div data-glide-el="controls">
+          <button data-glide-dir="<">Start</button>
+          <button data-glide-dir=">">End</button>
+        </div>
+       </div>
+     </div>
+   </div> -->
+
+   <div class="slider">
+    
+     <div class="row justify-content-center m-0">
+      <div class="col-10 col-lg-9 slider__container">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li  class="slider__item glide__slide"> <div style="background-color: red;"></div> </li>
+              <li  class="slider__item glide__slide"> <div style="background-color: blue;"></div> </li>
+              <li  class="slider__item glide__slide"> <div style="background-color: yellow;"></div> </li>
+            </ul>
+          </div>
+          <div class="slider__controls" data-glide-el="controls">
+            <button class="slider__side-btn" data-glide-dir="<"> <i class="bi bi-arrow-left"></i> </button>
+            <a href="#" class="slider__topic-btn"> Подробнее </a>
+            <button class="slider__side-btn" data-glide-dir=">"> <i class="bi bi-arrow-right"></i> </button>
+          </div>
+          
+        </div>
+        
+      </div>
      </div>
    </div>
 
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+  
+  
+
 
     <!-- BOOTSTRAP JS LINK -->
     <script
@@ -91,6 +129,10 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+      new Glide('.glide').mount();
+    </script>
     <script src="script/index.js"></script>
   </body>
 </html>
