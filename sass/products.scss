@@ -37,6 +37,9 @@ body{
     .menu__categories{
         width: 100%;
         position: relative;
+        @media screen and (min-width: $breakpoint-xl){
+            display: none;
+        }
         .catalog__menu{
             display: none;
             position: absolute;
@@ -52,6 +55,18 @@ body{
         padding: 0 !important;
         margin: 0 !important;
         .menu__item{
+            &:nth-child(5){
+                display: none;
+            }
+            &:nth-child(6){
+                display: none;
+            }
+            &:nth-child(7){
+                display: none;
+            }
+            &:nth-child(8){
+                display: none;
+            }
             width: 50%;
             height: 120px;
             display: flex;
@@ -65,8 +80,12 @@ body{
                 height: 120px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
                 align-items: center;
+                justify-content: space-around;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
             }
             &:first-child, &:nth-child(2){
                 border-top: none;
@@ -96,6 +115,38 @@ body{
             &:nth-child(odd){
                 border-right: 1px solid $slicer-background;
             }
+            @media screen and (min-width: $breakpoint-md){
+                width: 25%;
+                border: 1px solid $slicer-background !important;
+                border-left: none !important;
+                &:nth-child(4){
+                    border-right: none !important;
+                }
+            }
+            @media screen and (min-width: $breakpoint-xl){
+                width: 12.5%;
+                li{
+                    span{
+                        font-size: 15px !important;
+                    }
+                }
+                &:nth-child(4){
+                    border-right: 1px solid $slicer-background !important;
+                }
+                &:nth-child(5){
+                    display: flex;
+                }
+                &:nth-child(6){
+                    display: flex;
+                }
+                &:nth-child(7){
+                    display: flex;
+                }
+                &:nth-child(8){
+                    display: flex;
+                    border-right: none !important;
+                }
+            }
         }
     }
 }
@@ -122,6 +173,9 @@ body{
             transition: all 0.3s linear;
             &:hover{
                 color: $slicer-highlight;
+            }
+            @media screen and (min-width: $breakpoint-xl){
+                font-size: 20px;
             }
         }
         .arrow{
@@ -183,6 +237,12 @@ body{
                 @include btn;
                 margin-bottom: 30px;
             }
+            @media screen and (min-width: $breakpoint-md){
+                
+            }
+        }
+        @media screen and (min-width: $breakpoint-md){
+            
         }
     }
 }
@@ -202,3 +262,6 @@ body{
         }
     }
 }
+
+
+
