@@ -1,152 +1,171 @@
 @import "var.scss";
-.popup{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 
-    .popup__background{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $slicer-black;
-        opacity: 0.7;
-        z-index: 300;
+.popup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .popup__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $slicer-black;
+    opacity: 0.7;
+    z-index: 300;
+  }
+
+  .popup__card {
+    display: flex;
+    flex-direction: column;
+    background-color: $slicer-background;
+    border-radius: 15px;
+    width: 325px;
+    z-index: 301;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      width: 425px;
     }
 
-    .popup__card{
+    .card__close {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px;
+
+      i {
+        font-size: 40px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        color: $slicer-light-text;
+
+        &:hover {
+          color: $slicer-red-dark;
+        }
+      }
+    }
+
+    .card__offer {
+      display: flex;
+
+      img {
+        width: 90px;
+        margin-left: 10px;
+
+        @media screen and (min-width: $breakpoint-xl) {
+          width: 120px;
+        }
+      }
+
+      .offer__text {
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
-        background-color: $slicer-background;
-        border-radius: 15px;
-        width: 325px;
-        z-index: 301;
 
-        @media screen and (min-width: $breakpoint-xl){
-            width: 425px;
+        h2 {
+          font-family: Roboto Slab;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 32px;
+          color: $slicer-black;
+
+          @media screen and (min-width: $breakpoint-xl) {
+            font-size: 28px;
+          }
         }
 
-        .card__close{
-            display: flex;
-            justify-content: flex-end;
-            padding: 8px;
-            i{
-                font-size: 40px;
-                cursor: pointer;
-                transition: all 0.2s linear;
-                color: $slicer-light-text;
-                &:hover{
-                    color: $slicer-red-dark;
-                }
-            }
+        span {
+          font-family: Nunito Sans;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 25px;
+
+          @media screen and (min-width: $breakpoint-xl) {
+            font-size: 23px;
+          }
         }
-
-        .card__offer{
-            display: flex;
-            img{
-                width: 90px;
-                margin-left: 10px;
-                @media screen and (min-width: $breakpoint-xl){
-                    width: 120px;
-                }
-            }
-            .offer__text{
-                margin-left: 20px;
-                display: flex;
-                flex-direction: column;
-
-                h2{
-                    font-family: Roboto Slab;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 24px;
-                    line-height: 32px;
-                    color: $slicer-black;
-                    @media screen and (min-width: $breakpoint-xl){
-                        font-size: 28px;
-                    }
-                }
-                span{
-                    font-family: Nunito Sans;
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 18px;
-                    line-height: 25px;
-                    @media screen and (min-width: $breakpoint-xl){
-                        font-size: 23px;
-                    }
-                }
-            }
-        }
-
-        .card__description{
-            margin-top: 30px;
-            list-style-type: none;
-            padding: 0;
-
-            .description__item{
-                font-family: Nunito Sans;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 12px;
-                line-height: 16px;
-                display: flex;
-                align-items: center;
-                @media screen and (min-width: $breakpoint-xl){
-                    font-size: 16px;
-                }
-                i{
-                    font-size: 25px;
-                    color: $slicer-light-text;
-                    @media screen and (min-width: $breakpoint-xl){
-                        font-size: 35px;
-                    }
-                }
-            }
-        }
-
-        .card__buttons{
-            display: flex;
-            flex-direction: column;
-            margin-top: 10px;
-            .buttons__buy-btn, .buttons__more-btn{
-                display: flex;
-                font-family: Nunito Sans;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                width: 180px;
-                height: 50px;
-                border-radius: 15px;
-                justify-content: center;
-                align-items: center;
-                transition: all 0.3s ease-in;
-                &:hover{
-                    background-color: $slicer-highlight;
-                }
-                @media screen and (min-width: $breakpoint-xl){
-                    width: 230px;
-                    height: 65px;
-                }
-            }
-            .buttons__buy-btn{
-                border: 1px solid $slicer-red;
-                color: $slicer-red;
-                text-decoration: none;
-                margin-left: 5px;
-                &:hover{
-                    border: none;
-                    color: $slicer-background;
-                }
-            }
-            .buttons__more-btn{
-                margin: 20px 0 20px 5px;
-                background-color: $slicer-red;
-                color: $slicer-background;
-                text-decoration: none;
-            }
-        }
+      }
     }
+
+    .card__description {
+      margin-top: 30px;
+      list-style-type: none;
+      padding: 0;
+
+      .description__item {
+        font-family: Nunito Sans;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-xl) {
+          font-size: 16px;
+        }
+
+        i {
+          font-size: 25px;
+          color: $slicer-light-text;
+
+          @media screen and (min-width: $breakpoint-xl) {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+
+    .card__buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      .buttons__buy-btn,
+      .buttons__more-btn {
+        display: flex;
+        font-family: Nunito Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        width: 180px;
+        height: 50px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          background-color: $slicer-highlight;
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+          width: 230px;
+          height: 65px;
+        }
+      }
+
+      .buttons__buy-btn {
+        border: 1px solid $slicer-red;
+        color: $slicer-red;
+        text-decoration: none;
+        margin-left: 5px;
+
+        &:hover {
+          border: none;
+          color: $slicer-background;
+        }
+      }
+
+      .buttons__more-btn {
+        margin: 20px 0 20px 5px;
+        background-color: $slicer-red;
+        color: $slicer-background;
+        text-decoration: none;
+      }
+    }
+  }
 }
