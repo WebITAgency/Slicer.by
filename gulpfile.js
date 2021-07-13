@@ -17,21 +17,21 @@ exports.watch = function () {
   gulp.watch('./sass/*.scss', ['sass']);
 };
 
-gulp.task('beautify-css', function() {
+gulp.task('bcss', function() {
   return gulp
     .src('./sass/*.scss')
     .pipe(beautify.css({ indent_size: 2 }))
     .pipe(gulp.dest('./sass/'));
 });
 
-gulp.task('beautify-html', function() {
+gulp.task('bhtml', function() {
   return gulp
     .src('./*.html')
     .pipe(beautify.html({ indent_size: 2 }))
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('beautify-js', function() {
+gulp.task('bjs', function() {
   return gulp
     .src('./script/*.js')
     .pipe(beautify.js({ indent_size: 2 }))
