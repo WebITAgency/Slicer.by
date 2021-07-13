@@ -30,8 +30,18 @@ body{
         background-color: $slicer-red;
         width: 100%;
         transition: all 0.3s linear;
-        &:hover{
+        &:active{
             background-color: $slicer-highlight;
+        }
+    }
+    .menu__categories{
+        width: 100%;
+        position: relative;
+        .catalog__menu{
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
         }
     }
     .catalog__menu{
@@ -42,17 +52,22 @@ body{
         padding: 0 !important;
         margin: 0 !important;
         .menu__item{
-            flex-direction: column;
             width: 50%;
             height: 120px;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
             background-color: $slicer-red;
             border-top: 1px solid $slicer-background;
             border-bottom: 1px solid $slicer-background;
             transition: all 0.3s linear;
-            cursor: pointer;
+            text-decoration: none;
+            li{
+                width: 100%;
+                height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
             &:first-child, &:nth-child(2){
                 border-top: none;
                 border-bottom: none;
@@ -60,10 +75,13 @@ body{
             &:nth-child(3), &:last-child{
                 border-bottom: none;
             }
-            &:hover{
+            &:active{
                 background-color: $slicer-highlight;
             }
             span{
+                display: flex;
+                justify-items: center;
+                align-items: center;
                 font-family: Ubuntu;
                 font-size: 18px;
                 font-style: normal;
