@@ -22,6 +22,12 @@
     }
 }
 
+@mixin bg{
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
 $slicer-red: #B02A37;
 $slicer-background: #ffffff;
 $slicer-black: #030303;

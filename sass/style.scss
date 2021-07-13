@@ -13,122 +13,42 @@ body{
     display: flex;
 }
 
-.header{
-    width: 100%;
-    height: 50px;
-    padding: 0px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $slicer-red-dark;
-    position: relative;
-    .mobile-menu{
-        transition: all 0.3s linear;
-        display: none;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 50px;
-        flex-direction: column;
-        align-items: center;
-        background-color: $slicer-red;
-        .mobile-menu__search-form{
-            margin: 50px 0;
-            display: flex;
-            .search-form__button{
-                margin-left: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $slicer-red;
-                border: none;
-                i{
-                    font-size: 24px;
-                    color: $slicer-background;
-                }
-            }
-            .search-form__input{
-                width: 240px;
-                height: 50px;
-                border-radius: 25px;
-                border: none;
-                color: $slicer-light-text;
-                font-family: Nunito Sans;
-                font-size: 16px;
-                padding-left: 10px;
-            }
-        }
-        .mobile-menu__link{
-            margin-top: 30px;
-            font-family: Nunito Sans;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 25px;
-            letter-spacing: 0em;
-            transition: all 0.3s linear;
-            text-decoration: none;
-            color: $slicer-background;
-            &:hover{
-                font-weight: 500;
-            }
-            &:nth-child(4){
-                text-decoration: underline;
-            }
-            &:first-child{
-                margin-top: 50px;
-            }
-        }
-    }
+.title{
+    @include bg;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.phonenumber{
+.logo{
+    width: 212px;
     cursor: pointer;
-    color: $slicer-background;
+    user-select: none;
+}
+
+.phonenumber_title{
+    margin-top: 20px;
+    color: $slicer-black;
+}
+
+.insta{
+    color: $slicer-black;
     display: flex;
     text-decoration: none;
     transition: 0.3s all ease;
+    margin-top: 10px;
     &__icon{
-        font-size: 13px; 
+        font-size: 16px; 
         display: flex; 
         align-items: center;
         text-decoration: none;
         margin-right: 5px;
     }
     &__text{
-        text-decoration: underline;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        text-decoration: none;
     }
     &:hover{
         color: $slicer-highlight;
     }
-}
-
-.btn-container{
-    transition: 0.3s all ease;
-    display: flex;
-    align-items: center;
-    color: $slicer-background;
-}
-
-.btn-container__search{
-    cursor: pointer;
-    font-size: 15px;
-
-}
-
-.btn-container__menu{
-    cursor: pointer;
-    font-size: 25px;
-    margin-left: 5px;
-}
-
-.title{
-    width: 100%;
-    // background: url();
-    background-color: aliceblue;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
