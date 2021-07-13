@@ -186,15 +186,16 @@ body{
     }
 
     .products__container{
-        display: flex;
+        // display: flex;
         // flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+        // flex-direction: column;
+        // width: 100%;
+        // align-items: center;
         .product-item{
-            margin-top: 30px;
+            margin: 15px 5px 15px 5px;
             display: flex;
             flex-direction: column;
+            // width: 335px;
             width: 325px;
             // height: 440px; ПО РУКАМ НАХУЙ ЗА СТАТИЧНУЮ ВЫСОТУ!!!!!!
             border-radius: 15px;
@@ -208,9 +209,9 @@ body{
                 font-weight: 300;
                 color: $slicer-black;
             }
-            &:first-child{
-                margin-top: 0;
-            }
+            // &:first-child{
+            //     margin-top: 0;
+            // }
             .line{
                 width: 90%;
                 height: 1px;
