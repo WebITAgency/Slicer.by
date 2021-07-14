@@ -6,7 +6,7 @@
   align-items: center;
   background-color: $slicer-red-dark;
   color: $slicer-background;
-  font-family: Nunito Sans;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -19,7 +19,7 @@
 
   &:hover {
     background: linear-gradient(90deg, #FD7E14 0%, #FFA51F 100%);
-    color: $slicer-black;
+    color: $slicer-background;
   }
 }
 

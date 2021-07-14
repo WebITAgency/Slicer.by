@@ -203,3 +203,50 @@ body {
 
   @media screen and (min-width: $breakpoint-xl) {}
 }
+
+.news-card {
+  padding: 0px !important;
+
+  &__thumb {
+    @include bg;
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    width: 90%;
+    margin-bottom: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    color: $slicer-light-text;
+  }
+}
+
+.contacts{
+    &__title{
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: $slicer-black;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+    &__subtitle{
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: $slicer-red;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    &__text{
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      color: $slicer-light-text;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+}
