@@ -224,29 +224,31 @@ body {
   }
 }
 
-.contacts{
-    &__title{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 24px;
-      font-weight: 500;
-      color: $slicer-black;
-      text-align: left;
-      margin-bottom: 25px;
-    }
-    &__subtitle{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      color: $slicer-red;
-      text-align: left;
-      margin-bottom: 10px;
-    }
-    &__text{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 200;
-      color: $slicer-light-text;
-      text-align: left;
-      margin-bottom: 25px;
-    }
+.contacts {
+  &__title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: $slicer-black;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  &__subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: $slicer-red;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: $slicer-light-text;
+    text-align: left;
+    margin-bottom: 25px;
+  }
 }

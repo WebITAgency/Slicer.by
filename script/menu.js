@@ -32,9 +32,9 @@ let $categories = document.querySelector('.push-menu');
 
 $categoriesBtn.addEventListener('click', showCategories);
 
-function showCategories(event){
+function showCategories(event) {
   event.preventDefault();
-  if ($categories.style.display === 'none'){
+  if ($categories.style.display === 'none') {
     $categories.style.display = 'flex';
     $categoriesBtn.querySelector('i').classList.remove('bi-arrow-down-short');
     $categoriesBtn.querySelector('i').classList.add('bi-arrow-up-short');
@@ -50,8 +50,8 @@ function showCategories(event){
 //Отключение стандартного поведения элементов меню с категориями
 let $links = document.querySelectorAll('.item__content');
 
-for (let i = 0; i < $links.length; i++){
-  $links[i].addEventListener('click', function(event){
+for (let i = 0; i < $links.length; i++) {
+  $links[i].addEventListener('click', function(event) {
     event.preventDefault();
   })
 }

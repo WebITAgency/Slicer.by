@@ -19,25 +19,25 @@ body {
 
 
 
-.catalog-container{
+.catalog-container {
   width: 100%;
   display: flex;
   flex-direction: column;
 
-  .catalog-container__btn-container{
+  .catalog-container__btn-container {
     width: 100%;
 
-    .push-menu{
+    .push-menu {
       display: none;
     }
 
-    &:last-child{
-      @media screen and (min-width: $breakpoint-xl){
+    &:last-child {
+      @media screen and (min-width: $breakpoint-xl) {
         display: none;
       }
     }
 
-    .btn-container__button{
+    .btn-container__button {
       width: 100%;
       height: 50px;
       display: flex;
@@ -51,18 +51,20 @@ body {
       text-decoration: none;
       transition: all 0.2s linear;
       background-color: $slicer-red;
-      &:active{
+
+      &:active {
         background-color: $slicer-highlight;
       }
-      @media screen and (min-width: $breakpoint-xl){
-        &:hover{
+
+      @media screen and (min-width: $breakpoint-xl) {
+        &:hover {
           background-color: $slicer-highlight;
         }
       }
     }
   }
 
-  .catalog-container__catalog{
+  .catalog-container__catalog {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -70,36 +72,80 @@ body {
     margin: 0 !important;
     padding: 0 !important;
 
-    .catalog__item{
+    .catalog__item {
       width: 50%;
       height: 100px;
       background-color: $slicer-red;
-      &:nth-child(odd){
+      position: relative;
+
+      @media screen and (min-width: $breakpoint-xl) {
+        &:hover {
+          .item__sub-menu {
+            display: block;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
         border-right: 1px solid $slicer-background;
       }
-      &:nth-child(1), &:nth-child(2){
+
+      &:nth-child(1),
+      &:nth-child(2) {
         border-bottom: 1px solid $slicer-background;
       }
-      &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8){
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8) {
         display: none;
-        @media screen and (min-width: $breakpoint-xl){
-          display: block;          
+
+        @media screen and (min-width: $breakpoint-xl) {
+          display: block;
         }
       }
 
-      // .item__sub-menu{
-      //   display: none;
-      // }
-      .item__sub-menu{
+      .item__sub-menu {
+        display: none;
+        transition: all 0.2s linear;
         width: 100%;
         list-style-type: none;
-        .sub-menu__item{
-          width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 101;
 
+        .sub-menu__item {
+          width: 100%;
+          height: 40px;
+
+          .sub-menu__link {
+            width: 100%;
+            height: 100%;
+            background-color: $slicer-red-dark;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-family: Ubuntu;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            color: $slicer-background;
+            border-top: 1px solid $slicer-background;
+            transition: all 0.2s linear;
+
+            &:hover {
+              background-color: $slicer-highlight;
+            }
+          }
         }
       }
 
-      .item__content{
+      .item__content {
         width: 100%;
         height: 100%;
         display: flex;
@@ -108,19 +154,23 @@ body {
         justify-content: space-around;
         text-decoration: none;
         transition: all 0.2s linear;
-        @media screen and (min-width: $breakpoint-xl){
-          &:hover{
+
+        @media screen and (min-width: $breakpoint-xl) {
+          &:hover {
             background-color: $slicer-highlight;
-          }          
+          }
         }
-        &:active{
+
+        &:active {
           background-color: $slicer-highlight;
         }
-        img{
+
+        img {
           width: 40px;
           height: 40px;
         }
-        span{
+
+        span {
           // margin-top: 10px;
           font-family: Ubuntu;
           font-size: 12px;
@@ -129,17 +179,22 @@ body {
           color: $slicer-background;
         }
       }
+
       @media screen and (min-width: $breakpoint-md) {
         width: 25%;
         border-right: 1px solid $slicer-background;
-        &:last-child{
+
+        &:last-child {
           border-right: none;
         }
-        &:nth-child(1), &:nth-child(2){
+
+        &:nth-child(1),
+        &:nth-child(2) {
           border-bottom: none;
         }
       }
-      @media screen and (min-width: $breakpoint-xl){
+
+      @media screen and (min-width: $breakpoint-xl) {
         width: 12.5%;
       }
     }
