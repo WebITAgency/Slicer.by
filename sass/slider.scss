@@ -45,12 +45,31 @@
       width: 100%;
       height: 340px;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 500;
+      color: $slicer-background;
+
+      span {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
       @media screen and (min-width: $breakpoint-md) {
         height: 400px;
+        font-size: 36px;
       }
 
       @media screen and (min-width: $breakpoint-xl) {
         height: 480px;
+        font-size: 48px;
+
       }
 
       @include bg;
@@ -89,8 +108,14 @@
     border-radius: 15px;
     cursor: pointer;
     transition: 0.3s all ease;
-    margin: 0 20px;
+    margin: 0 10px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin: 0 15px;
+    }
 
+    @media screen and (min-width: $breakpoint-xl) {
+      margin: 0 25px;
+    }
     &:hover {
       background-color: $slicer-highlight;
       text-decoration: none;
