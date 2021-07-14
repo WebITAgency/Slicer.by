@@ -1,13 +1,14 @@
 @import "var.scss";
 
-.info{
+.info {
   width: 100%;
   display: flex;
   flex-direction: column;
 
-  img{
+  img {
     width: 100%;
-    @media screen and (min-width: $breakpoint-xl){
+
+    @media screen and (min-width: $breakpoint-xl) {
       width: 768px;
       height: 466px;
       margin-left: 15px;
@@ -15,7 +16,7 @@
     }
   }
 
-  h1{
+  h1 {
     font-family: Roboto Slab;
     font-size: 24px;
     font-style: normal;
@@ -24,16 +25,18 @@
     letter-spacing: 0em;
     color: $slicer-red-dark;
     margin: 25px 15px;
-    @media screen and (min-width: $breakpoint-md){
+
+    @media screen and (min-width: $breakpoint-md) {
       font-size: 30px;
     }
-    @media screen and (min-width: $breakpoint-xl){
+
+    @media screen and (min-width: $breakpoint-xl) {
       order: 1;
       font-size: 48px;
     }
   }
 
-  p{
+  p {
     font-family: Nunito Sans;
     font-size: 12px;
     font-style: normal;
@@ -41,10 +44,12 @@
     text-align: left;
     color: $slicer-light-text;
     margin: 0 15px 20px 15px;
-    @media screen and (min-width: $breakpoint-md){
+
+    @media screen and (min-width: $breakpoint-md) {
       font-size: 20px;
     }
-    @media screen and (min-width: $breakpoint-xl){
+
+    @media screen and (min-width: $breakpoint-xl) {
       font-size: 26px;
       margin-right: 250px;
       order: 4;
@@ -52,14 +57,16 @@
     }
   }
 
-  .info__parameters{
+  .info__parameters {
     list-style-type: none;
     margin: 0 15px 20px 15px;
     padding: 0;
-    @media screen and (min-width: $breakpoint-xl){
+
+    @media screen and (min-width: $breakpoint-xl) {
       order: 5;
     }
-    .parameters__item{
+
+    .parameters__item {
       padding: 0;
       display: flex;
       color: $slicer-light-text;
@@ -69,19 +76,24 @@
       font-size: 12px;
       line-height: 16px;
       align-items: center;
-      @media screen and (min-width: $breakpoint-md){
+
+      @media screen and (min-width: $breakpoint-md) {
         font-size: 18px;
       }
-      @media screen and (min-width: $breakpoint-xl){
+
+      @media screen and (min-width: $breakpoint-xl) {
         font-size: 24px;
       }
-      i{
+
+      i {
         font-size: 25px;
         color: $slicer-light-text;
-        @media screen and (min-width: $breakpoint-md){
+
+        @media screen and (min-width: $breakpoint-md) {
           font-size: 40px;
         }
-        @media screen and (min-width: $breakpoint-xl){
+
+        @media screen and (min-width: $breakpoint-xl) {
           font-size: 55px;
         }
       }
@@ -89,28 +101,32 @@
   }
 }
 
-  .info__link{
-    color: $slicer-light-text;
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 25px;
-    margin: 10px 15px 25px 15px;
-    transition: all 0.2s ease-in-out;
-    &:active{
+.info__link {
+  color: $slicer-light-text;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px 15px 25px 15px;
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    color: $slicer-red-dark;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    font-size: 28px;
+    order: 2;
+
+    &:hover {
       color: $slicer-red-dark;
     }
-    @media screen and (min-width: $breakpoint-md){
-      font-size: 24px;
-    }
-    @media screen and (min-width: $breakpoint-xl){
-      font-size: 28px;
-      order: 2;
-      &:hover{
-        color: $slicer-red-dark;
-      }
-    }
+  }
 }
 
 
@@ -127,7 +143,8 @@
     line-height: 33px;
     color: $slicer-black;
     margin-bottom: 25px;
-    @media screen and (min-width: $breakpoint-md){
+
+    @media screen and (min-width: $breakpoint-md) {
       font-size: 32px;
     }
   }
@@ -140,17 +157,20 @@
     line-height: 25px;
     color: $slicer-light-text;
     transition: all 0.2s ease-in-out;
+
     &:active {
       color: $slicer-red-dark;
     }
-    @media screen and (min-width: $breakpoint-md){
+
+    @media screen and (min-width: $breakpoint-md) {
       font-size: 24px;
     }
-    @media screen and (min-width: $breakpoint-xl){
-      &:hover{
+
+    @media screen and (min-width: $breakpoint-xl) {
+      &:hover {
         color: $slicer-red-dark;
       }
     }
   }
-  
+
 }

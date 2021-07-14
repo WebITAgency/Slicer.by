@@ -188,3 +188,18 @@ body {
   margin-left: 5px;
   transition: all 0.3s linear;
 }
+
+.section-title {
+  margin-bottom: 25px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: $slicer-black;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {}
+}
