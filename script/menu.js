@@ -3,9 +3,6 @@
 let $burgerBtn = document.querySelector('.btn-container__menu');
 let $menu = document.querySelector('.mobile-menu');
 
-console.log($menu);
-console.log($burgerBtn);
-
 $burgerBtn.addEventListener('click', showMenu);
 
 function show($element) {
@@ -30,23 +27,31 @@ function showMenu() {
 
 
 // Меню с категориями
-let $categoriesBtn = document.querySelectorAll('.catalog__btn');
-let $categories = document.querySelector('.menu__categories .catalog__menu');
-let $arrow = document.querySelector('.catalog__btn i');
+let $categoriesBtn = document.querySelector('.categories-btn');
+let $categories = document.querySelector('.push-menu');
 
-$categoriesBtn[1].addEventListener('click', showCategories);
+$categoriesBtn.addEventListener('click', showCategories);
 
-function showCategories(event) {
+function showCategories(event){
   event.preventDefault();
-  if ($categories.style.display === 'flex') {
-    hide($categories);
-    $categoriesBtn[1].querySelector('span').textContent = 'Все категории';
-    $arrow.classList.remove('bi-arrow-up');
-    $arrow.classList.add('bi-arrow-down');
+  if ($categories.style.display === 'none'){
+    $categories.style.display = 'flex';
+    $categoriesBtn.querySelector('i').classList.remove('bi-arrow-down-short');
+    $categoriesBtn.querySelector('i').classList.add('bi-arrow-up-short');
+    $categoriesBtn.querySelector('span').textContent = 'Свернуть';
   } else {
-    show($categories);
-    $categoriesBtn[1].querySelector('span').textContent = 'Свернуть';
-    $arrow.classList.add('bi-arrow-up');
-    $arrow.classList.remove('bi-arrow-down');
+    $categories.style.display = 'none';
+    $categoriesBtn.querySelector('i').classList.add('bi-arrow-down-short');
+    $categoriesBtn.querySelector('i').classList.remove('bi-arrow-up-short');
+    $categoriesBtn.querySelector('span').textContent = 'Все категории';
   }
+}
+
+//Отключение стандартного поведения элементов меню с категориями
+let $links = document.querySelectorAll('.item__content');
+
+for (let i = 0; i < $links.length; i++){
+  $links[i].addEventListener('click', function(event){
+    event.preventDefault();
+  })
 }
