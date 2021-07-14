@@ -110,6 +110,7 @@
     cursor: pointer;
     transition: 0.3s all ease;
     margin: 0 10px;
+
     @media screen and (min-width: $breakpoint-md) {
       margin: 0 15px;
     }
@@ -117,6 +118,7 @@
     @media screen and (min-width: $breakpoint-xl) {
       margin: 0 25px;
     }
+
     &:hover {
       background-color: $slicer-highlight;
       text-decoration: none;
