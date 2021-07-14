@@ -1,3 +1,4 @@
+// Инициализация слайдера
 glide = new Glide('.glide', {
   type: 'carousel',
   startAt: 0,
@@ -7,6 +8,8 @@ glide = new Glide('.glide', {
 })
 .mount();
 
+
+// Редирект со слайдера
  document.querySelector(".slider__topic-btn").addEventListener('click', () => {
    document.location.href =
      document.getElementsByClassName("slider__item-content")[glide.index]
