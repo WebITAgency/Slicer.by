@@ -1,8 +1,7 @@
 @import "var.scss";
 
 .header{
-  padding-top: 16px;
-  padding-bottom: 16px;
+  min-height: 50px;
   background-color: $slicer-red-dark;
   &__phonenumber{
     color: $slicer-background;
@@ -10,31 +9,26 @@
       font-size: 13px;
     }
     a{
-      transition: 0.3s all ease;
       font-size: 14px;
       color: $slicer-background;
       cursor: pointer;
-      &:hover{
-        color: $slicer-highlight;
-      }
+      
     }
+  }
   &__search{
     font-size: 15px;
     cursor: pointer;
     color: $slicer-background;
-      cursor: pointer;
-      &:hover{
-        color: $slicer-highlight;
-      }
+    cursor: pointer;  
   }
   &__menu{
-    font-size: 35px;
+    margin-left: 10px;
+    font-size: 24px;
     cursor: pointer;
     color: $slicer-background;
-      cursor: pointer;
-      &:hover{
-        color: $slicer-highlight;
-      }
+    cursor: pointer; 
   }
+  &__desktop-menu{
+
   }
 }
