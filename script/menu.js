@@ -3,13 +3,17 @@
 let $burgerBtn = document.querySelector('.header__menu_icon');
 let $menu = document.querySelector('.header__menu-mobile');
 let isMenuActive = false;
-$burgerBtn.addEventListener('click', () => {
-    $menu.classList.toggle('header__menu-mobile--inactive');
-    $menu.classList.toggle('header__menu-mobile--active');
-    $burgerBtn.classList.toggle('bi-x');
-    $burgerBtn.classList.toggle('bi-list');
-    isMenuActive = !isMenuActive;
-});
+
+let menuToggle = () => {
+  $menu.classList.toggle('header__menu-mobile--inactive');
+  $menu.classList.toggle('header__menu-mobile--active');
+  $burgerBtn.classList.toggle('bi-x');
+  $burgerBtn.classList.toggle('bi-list');
+  isMenuActive = !isMenuActive;
+}
+
+$burgerBtn.addEventListener('click', menuToggle);
+
 
 // Меню с категориями
 let $categoriesBtn = document.querySelector('.categories-btn');
