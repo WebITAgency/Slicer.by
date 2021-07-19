@@ -1,0 +1,77 @@
+@import "var.scss";
+
+.header{
+  padding: 0 25px !important;
+  min-height: 50px;
+  @media screen and (min-width: $breakpoint-lg) {
+    min-height: 55px;
+  }
+  background-color: $slicer-red-dark;
+  &__phonenumber{
+    color: $slicer-background;
+    i{
+      font-size: 13px;
+    }
+    a{
+      font-size: 14px;
+      color: $slicer-background;
+      cursor: pointer;
+      
+    }
+  }
+  &__search{ 
+    font-size: 15px;
+    cursor: pointer;
+    color: $slicer-background;
+    cursor: pointer;  
+  }
+  &__menu{
+    margin-left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: $slicer-background;
+    cursor: pointer; 
+  } 
+  &__search-field{
+    border-radius: 15px;
+    font-size: 14px;
+    color: $slicer-light-text;
+    padding: 4px 10px;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+    &:focus{
+      outline-width: 0px;
+      outline: none;
+    }
+  }
+  &__search-submit{
+    font-size: 15px;
+    cursor: pointer;
+    color: $slicer-background;
+    cursor: pointer; 
+    background: none; 
+    border: none;
+    margin-left: 10px;
+  }
+  &__desktop-links{
+    li {
+      margin-right: 20px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      // &:first-child{
+      //   margin-left: 20px;
+      // }
+      a{
+        color: $slicer-background;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.3s all ease;
+        &:hover{
+          color: $slicer-highlight;
+        }
+      }
+    }
+  }
+}
