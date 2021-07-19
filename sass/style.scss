@@ -190,7 +190,8 @@ body {
 }
 
 .section-title {
-  margin-bottom: 25px;
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 24px;
   font-weight: 300;
@@ -201,7 +202,10 @@ body {
     margin-bottom: 25px;
   }
 
-  @media screen and (min-width: $breakpoint-xl) {}
+  @media screen and (min-width: $breakpoint-xl) {
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+  }
 }
 
 .news-card {
