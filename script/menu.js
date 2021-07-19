@@ -47,11 +47,3 @@ function showCategories(event) {
   }
 }
 
-//Отключение стандартного поведения элементов меню с категориями
-let $links = document.querySelectorAll('.item__content');
-
-for (let i = 0; i < $links.length; i++) {
-  $links[i].addEventListener('click', function(event) {
-    event.preventDefault();
-  })
-}
