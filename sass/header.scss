@@ -3,6 +3,7 @@
 .header{
   padding: 0 25px !important;
   min-height: 50px;
+  position: relative;
   @media screen and (min-width: $breakpoint-lg) {
     min-height: 55px;
   }
@@ -31,7 +32,27 @@
     cursor: pointer;
     color: $slicer-background;
     cursor: pointer; 
-  } 
+
+    &-mobile{
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      background-color: red;
+      z-index: 200;
+      transition: 0.2s all ease;
+      overflow: hidden;
+      padding: 30px;
+      &--inactive{
+        height: 0px;
+        opacity: 0;
+      }
+      &--active{
+        height: 200px;
+        opacity: 1;
+
+      }
+    }
+  }
   &__search-field{
     border-radius: 15px;
     font-size: 14px;
