@@ -255,3 +255,110 @@ body {
       flex-direction: column;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.triangle{
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 150px;
+  height: 150px;
+  background-color: $slicer-highlight;
+  transform: rotateZ(45deg);
+  span{
+    display: inline-block;
+    font-size: 25px;
+    color: $slicer-background;
+    position: absolute;
+    right: 0;
+    bottom: 55px;
+    transform: rotateZ(-90deg);
+  }
+}
