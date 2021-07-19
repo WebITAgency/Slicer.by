@@ -1,30 +1,15 @@
 "use strict"
 // Мобильное меню
-let $burgerBtn = document.querySelector('.btn-container__menu');
-let $menu = document.querySelector('.mobile-menu');
-
-$burgerBtn.addEventListener('click', showMenu);
-
-function show($element) {
-  $element.style.display = 'flex';
-}
-
-function hide($element) {
-  $element.style.display = 'none';
-}
-
-function showMenu() {
-  if ($menu.style.display === 'flex') {
-    hide($menu);
-    $burgerBtn.classList.add('bi-list');
-    $burgerBtn.classList.remove('bi-x');
-  } else {
-    show($menu);
-    $burgerBtn.classList.add('bi-x');
-    $burgerBtn.classList.remove('bi-list');
-  }
-}
-
+let $burgerBtn = document.querySelector('.header__menu_icon');
+let $menu = document.querySelector('.header__menu-mobile');
+let isMenuActive = false;
+$burgerBtn.addEventListener('click', () => {
+    $menu.classList.toggle('header__menu-mobile--inactive');
+    $menu.classList.toggle('header__menu-mobile--active');
+    $burgerBtn.classList.toggle('bi-x');
+    $burgerBtn.classList.toggle('bi-list');
+    isMenuActive = !isMenuActive;
+});
 
 // Меню с категориями
 let $categoriesBtn = document.querySelector('.categories-btn');
@@ -47,3 +32,11 @@ function showCategories(event) {
   }
 }
 
+//Отключение стандартного поведения элементов меню с категориями
+let $links = document.querySelectorAll('.item__content');
+
+for (let i = 0; i < $links.length; i++) {
+  $links[i].addEventListener('click', function(event) {
+    event.preventDefault();
+  })
+}
