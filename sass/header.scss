@@ -37,7 +37,7 @@
       position: absolute;
       top: 50px;
       left: 0px;
-      background-color: red;
+      background-color: $slicer-red;
       z-index: 200;
       transition: 0.2s all ease;
       overflow: hidden;
@@ -47,9 +47,24 @@
         opacity: 0;
       }
       &--active{
-        height: 200px;
+        height: auto;
         opacity: 1;
 
+      }
+      ul{
+        li{
+          a{
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: $slicer-background;
+            text-decoration: none;
+            :hover{
+              color: $slicer-background;
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   }
