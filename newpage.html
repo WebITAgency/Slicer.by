@@ -20,21 +20,46 @@
         
     </div> -->
 
-  <header class="header">
-    <i class="bi bi-house home-btn"></i>
-    <div class="btn-container">
-      <i class="btn-container__search bi bi-search"></i>
-      <i class="btn-container__menu bi bi-list"></i>
-    </div>
-    <div class="mobile-menu">
-      <a href="#" class="mobile-menu__link">Главная</a>
-      <a href="#" class="mobile-menu__link">Контакты</a>
-      <a href="#" class="mobile-menu__link">Каталог</a>
-      <a href="#" class="mobile-menu__link">ВАЛВИТ</a>
-      <form action="" class="mobile-menu__search-form">
-        <input type="text" class="search-form__input" placeholder="Найти на странице">
-        <button class="search-form__button"><i class="bi bi-search"></i></button>
-      </form>
+  <header class="container-fluid d-flex justify-content-center align-items-center header">
+    <div class="row w-100 d-flex justify-content-between align-items-center">
+      <div class="col p-0 header__phonenumber d-lg-none">
+        <i class="bi bi-telephone"></i>
+        <a href="#"> +375 (162) 35 64 45 </a>
+      </div>
+      <div class="p-0 header__desktop-menu align-items-center col d-none d-lg-flex">
+
+        <ul class="header__desktop-links list-unstyled d-flex align-items-center p-0 m-0">
+          <li><a href="#"> <i class="bi bi-house"></i> </a></li>
+          <li><a href="#"> Контакты </a></li>
+          <li><a href="#"> Каталог </a></li>
+          <li><a href="#"> ВАЛВИТ </a></li>
+        </ul>
+      </div>
+      <div class="col d-flex justify-content-end align-items-center p-0">
+        <form class="d-none d-lg-flex header__search-form">
+          <input class="header__search-field" placeholder="Поиск" type="search" name="" id="">
+          <button class="header__search-submit" type="submit"> <i class="bi bi-search"></i> </button>
+        </form>
+        <!-- <div class="header__search d-lg-none">
+            <i class="bi bi-search"></i>
+          </div> -->
+        <div class="header__menu d-lg-none">
+          <i class="header__menu_icon bi bi-list"></i>
+          <div class="header__menu-mobile header__menu-mobile--inactive container-fluid">
+            <ul class="d-flex w-100 flex-column list-unstyled align-items-center justify-content-center container">
+              <li><a href="#"> Контакты </a></li>
+              <li><a href="#"> Каталог </a></li>
+              <li><a href="#"> ВАЛВИТ </a></li>
+              <form class="mt-4 header__search-form">
+                <input class="header__search-field" placeholder="Поиск" type="search" name="" id="">
+                <button class="header__search-submit" type="submit"> <i class="bi bi-search"></i> </button>
+              </form>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </header>
 
