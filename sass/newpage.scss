@@ -136,16 +136,14 @@
   padding-bottom: 15px;
 
   h2 {
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 33px;
-    color: $slicer-black;
+    @include heading;
     margin-bottom: 25px;
 
     @media screen and (min-width: $breakpoint-md) {
-      font-size: 32px;
+      font-size: 36px;
+    }
+    @media screen and (min-width: $breakpoint-xl){
+      font-size: 48px;
     }
   }
 
