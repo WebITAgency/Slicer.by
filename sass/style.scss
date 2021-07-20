@@ -15,6 +15,9 @@ button {
 body {
   min-width: 375px;
   background-color: $slicer-page-background !important;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
 }
 
 .open {
@@ -216,6 +219,7 @@ body {
     width: 100%;
     min-height: 200px;
     margin-bottom: 25px;
+    cursor: pointer;
   }
 
   &__text {
@@ -260,6 +264,29 @@ body {
     }
 }
 
+.footer {
+  width: 100%;
+  background-color: $slicer-background;
+  padding: 30px 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  .partners {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .partners__item {
+      height: 30px;
+      margin: 30px 0 15px 0;
+
+      @media screen and (min-width: $breakpoint-xl) {
+        height: 40px;
+      }
+    }
+  }
+}
 
 
 
