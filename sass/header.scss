@@ -1,16 +1,18 @@
 @import "var.scss";
 
 .header{
+  padding: 0 25px !important;
+  min-height: 50px;
   position: sticky;
   top: 0;
   left: 0;
-  padding: 0 25px !important;
-  min-height: 50px;
-  z-index: 9999;
+  z-index: 500;
   // position: relative;
   @media screen and (min-width: $breakpoint-lg) {
     min-height: 55px;
   }
+  
+  
   background-color: $slicer-red-dark;
   &__phonenumber{
     color: $slicer-background;
