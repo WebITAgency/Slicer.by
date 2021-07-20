@@ -20,8 +20,14 @@
     &__price{
         font-family: 'Nunito Sans', sans-serif;
         font-size: 18px;
-        font-weight: 200;
+        font-weight: 300;
         color: $slicer-black;
         margin-bottom: 25px;
+    }
+    &__description{
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        color: $slicer-light-text;
+        font-size: 24px;
     }
 }
