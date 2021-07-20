@@ -1,9 +1,10 @@
 @import "var.scss";
 
 .header{
+  
   padding: 0 25px !important;
   min-height: 50px;
-  position: relative;
+  // position: relative;
   @media screen and (min-width: $breakpoint-lg) {
     min-height: 55px;
   }
