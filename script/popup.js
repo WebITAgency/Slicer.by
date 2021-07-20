@@ -1,5 +1,6 @@
 let popupWindow = document.querySelector('.popup');
 let closeBtn = document.querySelector('.card__close');
+let header = document.querySelector('header');
 
 closeBtn.addEventListener('click', closePopup);
 
