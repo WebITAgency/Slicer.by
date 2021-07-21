@@ -15,3 +15,4 @@ document.querySelector(".slider__topic-btn").addEventListener('click', () => {
     document.getElementsByClassName("slider__item-content")[glide.index]
     .getAttribute("data-href");
 });
+
