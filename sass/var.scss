@@ -16,11 +16,6 @@
   padding: 14px 37px;
   text-decoration: none;
   transition: all 0.3s linear;
-
-  &:hover {
-    background: linear-gradient(90deg, #FD7E14 0%, #FFA51F 100%);
-    color: $slicer-background;
-  }
 }
 
 @mixin bg {
