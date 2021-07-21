@@ -299,5 +299,9 @@ body {
   &__btn, .news-item__btn {
     @include btn;
     margin-bottom: 30px;
+    &:hover {
+      background: linear-gradient(90deg, #FD7E14 0%, #FFA51F 100%);
+      color: $slicer-background;
+    }
   }
 }
