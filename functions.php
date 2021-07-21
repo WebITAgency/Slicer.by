@@ -151,6 +151,15 @@ function slicer_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'slicer_scripts' );
 
+function additional_custom_styles() {
+    wp_enqueue_style( 'uniquestylesheetid', get_template_directory_uri() . '/css/style.css' ); 
+    echo get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.theme.min.css'  ;
+    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' ); 
+    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.theme.min.css' ); 
+
+}
+add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
+
 /**
  * Implement the Custom Header feature.
  */
