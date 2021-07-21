@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -15,8 +16,6 @@
 get_header();
 ?>
 
-<?php echo get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' ?>
-
 <section style="background-image: url(img/title_bg.png)" class="
         title
         container-fluid
@@ -26,7 +25,8 @@ get_header();
         align-items-center
       ">
     <div class="title__gradient"></div>
-    <img src="img/logo.png" class="logo" onclick="location.href='index.html'" />
+	
+    <img src="<?php get_theme_mod('slicer_identic_logo', $default = false)?>" class="logo"/>
     <a href="#" class="phonenumber phonenumber_title">
       <i class="phonenumber__icon bi bi-telephone"></i>
       <span class="phonenumber__text"> +375 (162) 35 64 45 </span>

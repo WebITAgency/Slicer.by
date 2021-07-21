@@ -11,6 +11,20 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function slicer_customize_register( $wp_customize ) {
+	$wp_customize->add_section('slicer_identic', array(
+		'title' => 'Идентика',
+		'priority' => 10,
+	));
+	$wp_customize->add_setting('slicer_identic_logo', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_identic_logo', array(
+		"label" => "Логотип",
+		"section" => "slicer_identic",
+		'settings' => 'slicer_identic_logo',
+	)));
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
