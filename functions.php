@@ -140,8 +140,7 @@ add_action( 'widgets_init', 'slicer_widgets_init' );
  * Enqueue scripts and styles.
  */
 function slicer_scripts() {
-	wp_enqueue_style( 'slicer-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'slicer-style', 'rtl', 'replace' );
+	// wp_style_add_data( 'slicer-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'slicer-glide-lib', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/glide.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'slicer-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'slicer-index', get_template_directory_uri() . '/script/index.js', array(), _S_VERSION, true );
@@ -163,6 +162,10 @@ function additional_custom_styles() {
     
 }
 add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
+
+function slicer_bg_url($path){
+	return 'background: url(' . $path . ');' ;
+}
 
 /**
  * Implement the Custom Header feature.
