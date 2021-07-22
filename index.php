@@ -26,7 +26,7 @@ get_header();
       ">
     <div class="title__gradient"></div>
 	
-    <img src="<?php echo get_theme_mod('slicer_identic_logo', $default = false)?>" class="logo"/>
+    <img src="<?php get_theme_mod('slicer_identic_logo', $default = false)?>" class="logo"/>
     <a href="#" class="phonenumber phonenumber_title">
       <i class="phonenumber__icon bi bi-telephone"></i>
       <span class="phonenumber__text"> +375 (162) 35 64 45 </span>
@@ -43,22 +43,26 @@ get_header();
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-            <?php
-            $posts = get_posts(
-              array(
-                'category_name' => 'slides',
-              )
-            );
-            foreach ($posts as $post) {
-            ?>
               <li class="slider__item glide__slide">
-                <div class="slider__item-content" data-href="0" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-                  <span><?php the_title(); ?></span>
+                <div class="slider__item-content" data-href="0" style="background-image: url(img/slider1.png);">
+                  <span>Ножи разделдочные</span>
                 </div>
               </li>
-            <?php
-            }
-            ?>
+              <li class="slider__item glide__slide">
+                <div class="slider__item-content" data-href="1" style="background-image: url(img/slider2.jpg);">
+                  <span>Слайсеры</span>
+                </div>
+              </li>
+              <li class="slider__item glide__slide">
+                <div class="slider__item-content" data-href="2" style="background-image: url(img/slider3.jpg);">
+                  <span>Мусаты</span>
+                </div>
+              </li>
+              <li class="slider__item glide__slide">
+                <div class="slider__item-content" data-href="3" style="background-image: url(img/slider4.jpg);">
+                  <span>Разделдочные приборы</span>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="slider__controls" data-glide-el="controls">

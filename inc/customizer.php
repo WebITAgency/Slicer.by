@@ -3,7 +3,7 @@
  * slicer Theme Customizer
  *
  * @package slicer
- */
+ */ 
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -24,8 +24,6 @@ function slicer_customize_register( $wp_customize ) {
 		"section" => "slicer_identic",
 		'settings' => 'slicer_identic_logo',
 	)));
-
-	
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
