@@ -284,7 +284,25 @@ get_header();
        justify-content-center
         justify-content-md-around
         ">
-    <div class="product-item col-10 col-md-5 col-xxl-3">
+    <?php
+    $posts = get_posts(array(
+      'category_name' => 'hits',
+      'numberposts' => 3,
+    ));
+    foreach ($posts as $post) {
+    ?>
+      <div class="product-item col-10 col-md-5 col-xxl-3">
+        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+        <h2><?php the_title(); ?></h2>
+        <div class="line"></div>
+        <span class="product-item__price"><?php the_excerpt(); ?></span>
+        <a href="#" class="product-item__btn">Ознакомиться</a>
+        <div class="triangle"><span>ХИТ!</span></div>
+      </div>
+    <?php
+    }
+    ?>
+    <!-- <div class="product-item col-10 col-md-5 col-xxl-3">
       <img src="img/A812T 1.png" alt="">
       <h2>Слайсер SL-228 EV-5</h2>
       <div class="line"></div>
@@ -310,7 +328,7 @@ get_header();
       <span class="product-item__price">Цена договорная</span>
       <a href="#" class="product-item__btn">Ознакомиться</a>
       <div class="triangle"><span>ХИТ!</span></div>
-    </div>
+    </div> -->
 
   </div>
 
