@@ -29,11 +29,11 @@ get_header();
   <img src="<?php echo get_theme_mod('slicer_identic_logo') ?>" class="logo" />
   <a href="#" class="phonenumber phonenumber_title">
     <i class="phonenumber__icon bi bi-telephone"></i>
-    <span class="phonenumber__text"> +375 (162) 35 64 45 </span>
+    <span class="phonenumber__text"> <?php echo get_theme_mod('slicer_links_phone') ?></span>
   </a>
   <a href="#" class="insta">
     <i class="insta__icon bi bi-instagram"></i>
-    <span class="insta__text"> knives_valvit </span>
+    <span class="insta__text"> <?php echo get_theme_mod('slicer_links_inst') ?> </span>
   </a>
 </section>
 
