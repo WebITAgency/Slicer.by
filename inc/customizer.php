@@ -20,32 +20,25 @@ function slicer_customize_register( $wp_customize ) {
 		'transport' => 'postMessage',
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_identic_logo', array(
-		"label" => "Логотип",
+		'label' => 'Логотип',
 		"section" => "slicer_identic",
 		'settings' => 'slicer_identic_logo',
 	)));
 
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
-	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial(
-			'blogname',
-			array(
-				'selector'        => '.site-title a',
-				'render_callback' => 'slicer_customize_partial_blogname',
-			)
-		);
-		$wp_customize->selective_refresh->add_partial(
-			'blogdescription',
-			array(
-				'selector'        => '.site-description',
-				'render_callback' => 'slicer_customize_partial_blogdescription',
-			)
-		);
-	}
-}
+	$wp_customize->add_section('slicer_view', array(
+		'title' => 'Оформление',
+		'priority' => 11,
+	));
+	$wp_customize->add_setting('slicer_view_background', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_view_background', array(
+		'label' => 'Фон заголовка',
+		'section' => 'slicer_view',
+		'settings' => 'slicer_view_background',
+	)));
+};
 add_action( 'customize_register', 'slicer_customize_register' );
 
 /**
