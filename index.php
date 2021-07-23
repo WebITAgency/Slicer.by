@@ -78,7 +78,7 @@ get_header();
 
   <ul class="catalog-container__catalog">
     <li class="catalog__item">
-      <a href="#" class="item__content">
+      <a href="<?php echo get_home_url() . '/products?cat=slicers' ?>" class="item__content">
         <img src="img/Meat slicer-Slice-Kitchen-Cook-Chef.svg" alt="">
         <span>Слайсеры</span>
       </a>
@@ -295,41 +295,13 @@ get_header();
         <img src="<?php the_post_thumbnail_url(); ?>" alt="">
         <h2><?php the_title(); ?></h2>
         <div class="line"></div>
-        <span class="product-item__price"><?php the_excerpt(); ?></span>
+        <span class="product-item__price"><?php the_excerpt(); ?></span> 
         <a href="#" class="product-item__btn">Ознакомиться</a>
         <div class="triangle"><span>ХИТ!</span></div>
       </div>
     <?php
     }
     ?>
-    <!-- <div class="product-item col-10 col-md-5 col-xxl-3">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-
-    </div>
-
-    <div class="product-item col-10 col-md-5 col-xxl-3 hit-flag">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-      <div class="triangle"><span>ХИТ!</span></div>
-    </div>
-
-
-    <div class="product-item col-10 col-md-5 col-xxl-3 hit-flag">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-      <div class="triangle"><span>ХИТ!</span></div>
-    </div> -->
-
   </div>
 
 </section>
@@ -467,5 +439,4 @@ get_header();
 </section>
 
 <?php
-get_sidebar();
 get_footer();
