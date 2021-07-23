@@ -49,8 +49,19 @@ function slicer_customize_register( $wp_customize ) {
 	));
 	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slicer_links_phone', array(
 		'label' => 'Номер телефона',
+		'description' => 'Отображаемый',
 		'section' => 'slicer_links',
 		'settings' => 'slicer_links_phone',
+	)));
+	$wp_customize->add_setting('slicer_links_phone_back', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slicer_links_phone_back', array(
+		'label' => 'Номер телефона',
+		'description' => 'Фактический',
+		'section' => 'slicer_links',
+		'settings' => 'slicer_links_phone_back',
 	)));
 	$wp_customize->add_setting('slicer_links_inst', array(
 		'default' => '',
@@ -60,6 +71,17 @@ function slicer_customize_register( $wp_customize ) {
 		'label' => 'Ссылка на инстаграм',
 		'section' => 'slicer_links',
 		'settings' => 'slicer_links_inst',
+		'description' => 'Отображаемый',
+	)));
+	$wp_customize->add_setting('slicer_links_inst_back', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'slicer_links_inst_back', array(
+		'label' => 'Ссылка на инстаграм',
+		'section' => 'slicer_links',
+		'settings' => 'slicer_links_inst_back',
+		'description' => 'Фактический (URL)',
 	)));
 };
 add_action( 'customize_register', 'slicer_customize_register' );

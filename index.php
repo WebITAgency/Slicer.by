@@ -27,11 +27,11 @@ get_header();
   <div class="title__gradient"></div>
 
   <img src="<?php echo get_theme_mod('slicer_identic_logo') ?>" class="logo" />
-  <a href="#" class="phonenumber phonenumber_title">
+  <a href="<?php echo 'tel:' . get_theme_mod('slicer_links_phone_fact') ?>" class="phonenumber phonenumber_title">
     <i class="phonenumber__icon bi bi-telephone"></i>
     <span class="phonenumber__text"> <?php echo get_theme_mod('slicer_links_phone') ?></span>
   </a>
-  <a href="#" class="insta">
+  <a target="_blank" rel="noopener noreferrer"  href="<?php echo get_theme_mod('slicer_links_inst_back') ?>" class="insta">
     <i class="insta__icon bi bi-instagram"></i>
     <span class="insta__text"> <?php echo get_theme_mod('slicer_links_inst') ?> </span>
   </a>
@@ -72,205 +72,7 @@ get_header();
   </div>
 </section>
 
-<div class="catalog-container">
-
-  <div class="catalog-container__btn-container"><a href="#" class="btn-container__button">Все товары</a></div>
-
-  <ul class="catalog-container__catalog">
-    <li class="catalog__item">
-      <a href="<?php echo get_home_url() . '/products?cat=slicers' ?>" class="item__content">
-        <img src="img/Meat slicer-Slice-Kitchen-Cook-Chef.svg" alt="">
-        <span>Слайсеры</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Универсальные</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для сыра</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Ножи слайсерные</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Vector.svg" alt="">
-        <span>Пилы</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Ленточные</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Дисковые</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Полотна для пил</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Дисковые ножи</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Vector-1.svg" alt="">
-        <span>Ножи Eicker</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">MANAGER</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">PROFI</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">PROFI E7</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">С защитной ручкой</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Кованые ножи</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Кухонные ножи</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Секачи</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Аксессуары</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Group.svg" alt="">
-        <span>Мусаты</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Поварские</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для мяса</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для птицы</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для рыбы</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для сыра</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Для овощей</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Секачи</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Хранение ножей</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Group-1.svg" alt="">
-        <span>Ножи разделочные</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">EICKER</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Другие</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Group-2.svg" alt="">
-        <span>Гигиена</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Гигиена ножей</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Vector-2.svg" alt="">
-        <span>Защитная одежда</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">DICK</a>
-        </li>
-      </ul>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="item__content">
-        <img src="img/Group-3.svg" alt="">
-        <span>Заточка</span>
-      </a>
-
-      <ul class="item__sub-menu">
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Фартуки</a>
-        </li>
-        <li class="sub-menu__item">
-          <a href="#" class="sub-menu__link">Перчатки</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <div class="catalog-container__btn-container"><a href="#" class="btn-container__button categories-btn"><i class="bi bi-arrow-down-short"></i><span>Все категории</span></a>
-
-    <ul class="catalog-container__catalog push-menu">
-      <li class="catalog__item">
-        <a href="#" class="item__content">
-          <img src="img/Group-1.svg" alt="">
-          <span>Ножи разделочные</span>
-        </a>
-      </li>
-      <li class="catalog__item">
-        <a href="#" class="item__content">
-          <img src="img/Group-2.svg" alt="">
-          <span>Гигиена</span>
-        </a>
-      </li>
-      <li class="catalog__item">
-        <a href="#" class="item__content">
-          <img src="img/Vector-2.svg" alt="">
-          <span>Защитная одежда</span>
-        </a>
-      </li>
-      <li class="catalog__item">
-        <a href="#" class="item__content">
-          <img src="img/Group-3.svg" alt="">
-          <span>Заточка</span>
-        </a>
-      </li>
-    </ul>
-
-  </div>
-
-
-</div>
+<?php require('cat-menu.php') ?>
 
 <section class="container">
   <div class="row d-flex justify-content-center">
@@ -366,8 +168,8 @@ get_header();
           ));
           foreach ($posts as $post) {
             ?>
-               <div class="product-item news-card col-10 col-md-5 col-xxl-3">
-      <div class="news-card__thumb" style="background-image: url(<?php the_post_thumbnail_url() ?>);"></div>
+      <div class="product-item news-card col-10 col-md-5 col-xxl-3">
+      <a class="news-card__thumb" href="<?php the_permalink() ?>" style="background-image: url(<?php the_post_thumbnail_url() ?>);"></a>
       <h2><?php the_title() ?></h2>
       <div class="line"></div>
       <span class="news-card__text">
