@@ -32,12 +32,13 @@
       </div>
       <div class="p-0 header__desktop-menu align-items-center col d-none d-lg-flex">
 
-        <ul class="header__desktop-links list-unstyled d-flex align-items-center p-0 m-0">
-          <li><a href="<?php echo get_home_url() ?>"> <i class="bi bi-house"></i> </a></li>
-          <li><a href="#"> Контакты </a></li>
-          <li><a href="#"> Каталог </a></li>
-          <li><a href="#"> ВАЛВИТ </a></li>
-        </ul>
+        <a href="<?php echo get_home_url() ?>"> <i class="bi bi-house"></i> </a>
+        <?php wp_nav_menu(array(
+            'theme_location'=> 'header-menu',
+            'container'=>'',
+            //'menu_class'=>'p-0 header__desktop-menu align-items-center col d-none d-lg-flex',
+            'items_wrap' => '<ul class="header__desktop-links list-unstyled d-flex align-items-center p-0 m-0">%3$s</ul>',
+        )); ?>
       </div>
       <div class="col d-flex justify-content-end align-items-center p-0">
         <form class="d-none d-lg-flex header__search-form">

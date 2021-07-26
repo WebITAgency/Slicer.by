@@ -177,7 +177,7 @@ get_header();
   </div>
 </section>
 
-<section class="d-flex flex-column container justify-content-start">
+<section id="contacts" class="d-flex flex-column container justify-content-start">
   <div class="row d-flex justify-content-center">
     <h2 class="text-center col-12 section-title">
       Контакты
