@@ -28,15 +28,16 @@
     <div class="row w-100 d-flex justify-content-between align-items-center">
       <div class="col p-0 header__phonenumber d-lg-none">
         <i class="bi bi-telephone"></i>
-        <a href="#"> +375 (162) 35 64 45 </a>
+        <a href="<?php echo 'tel:' . get_theme_mod('slicer_links_phone_fact') ?>">
+         <?php echo get_theme_mod('slicer_links_phone')?>
+         </a>
       </div>
       <div class="p-0 header__desktop-menu align-items-center col d-none d-lg-flex">
 
-        <a href="<?php echo get_home_url() ?>"> <i class="bi bi-house"></i> </a>
+        <a class="header__homebutton" href="<?php echo get_home_url() ?>"> <i class="bi bi-house"></i> </a>
         <?php wp_nav_menu(array(
             'theme_location'=> 'header-menu',
             'container'=>'',
-            //'menu_class'=>'p-0 header__desktop-menu align-items-center col d-none d-lg-flex',
             'items_wrap' => '<ul class="header__desktop-links list-unstyled d-flex align-items-center p-0 m-0">%3$s</ul>',
         )); ?>
       </div>
