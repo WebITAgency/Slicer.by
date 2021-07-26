@@ -11,22 +11,43 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'slicer' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'slicer' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'slicer' ), 'slicer', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+    <div class="partners">
+      <img src="../img/dick-white 1.png" alt="" class="partners__item">
+      <img src="../img/Giesser_Messer_magazin_posudy_posuda_dlya_restoranov_professionalnaya.png" alt="" class="partners__item">
+      <img src="../img/mainca 1.png" alt="" class="partners__item">
+      <img src="../img/roser-group.png" alt="" class="partners__item">
+      <img src="../img/eicker 1.png" alt="" class="partners__item">
+    </div>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__background"></div>
+
+    <div class="popup__card">
+      <div class="card__close"><i class="bi bi-x"></i></div>
+
+      <div class="card__offer">
+        <img src="../img/A812T 1.png" alt="">
+        <div class="offer__text">
+          <h2>Слайсер SL-228 EV-5</h2>
+          <span>Цена договорная</span>
+        </div>
+      </div>
+
+      <ul class="card__description">
+        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
+        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
+        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
+        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
+      </ul>
+
+      <div class="card__buttons">
+        <a href="#" class="buttons__buy-btn">Подробнее</a>
+        <a href="#" class="buttons__more-btn">Заказать</a>
+      </div>
+    </div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

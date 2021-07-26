@@ -1,11 +1,11 @@
 <div class="catalog-container">
 
-  <div class="catalog-container__btn-container"><a href="<?php echo get_home_url() . '/products?cat=' ?>" class="btn-container__button">Все товары</a></div>
+  <div class="catalog-container__btn-container"><a href="<?php echo get_home_url() . '/products?cat=product' ?>" class="btn-container__button">Все товары</a></div>
 
   <ul class="catalog-container__catalog">
     <li class="catalog__item">
-      <a href="<?php echo get_home_url() . '/products?cat=product' ?>" class="item__content">
-        <img src="img/Meat slicer-Slice-Kitchen-Cook-Chef.svg" alt="">
+      <a href="<?php echo get_home_url() . '/products?cat=slicers' ?>" class="item__content">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_slicer') ?>" alt="">
         <span>Слайсеры</span>
       </a>
 
@@ -23,7 +23,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=saws' ?>" class="item__content">
-        <img src="img/Vector.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_saws') ?>" alt="">
         <span>Пилы</span>
       </a>
 
@@ -44,7 +44,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=knife-eicker' ?>" class="item__content">
-        <img src="img/Vector-1.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_cutting-knife-eicker') ?>" alt="">
         <span>Ножи Eicker</span>
       </a>
 
@@ -77,7 +77,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=musats' ?>" class="item__content">
-        <img src="img/Group.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_musats') ?>" alt="">
         <span>Мусаты</span>
       </a>
 
@@ -110,7 +110,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=cutting-knives' ?>" class="item__content">
-        <img src="img/Group-1.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_cutting-knives') ?>" alt="">
         <span>Ножи разделочные</span>
       </a>
 
@@ -125,7 +125,7 @@
     </li>
     <li class="catalog__item">
       <a href="#" class="item__content">
-        <img src="img/Group-2.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_hygiene') ?>" alt="">
         <span>Гигиена</span>
       </a>
 
@@ -137,7 +137,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=musats' ?>" class="item__content">
-        <img src="img/Vector-2.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_protective-clothing') ?>" alt="">
         <span>Защитная одежда</span>
       </a>
 
@@ -149,7 +149,7 @@
     </li>
     <li class="catalog__item">
       <a href="<?php echo get_home_url() . '/products?cat=grinding' ?>" class="item__content">
-        <img src="img/Group-3.svg" alt="">
+        <img src="<?php echo get_theme_mod('slicer_cat_menu_grinding') ?>" alt="">
         <span>Заточка</span>
       </a>
 
@@ -169,25 +169,25 @@
     <ul class="catalog-container__catalog push-menu">
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=cutting-knives' ?>" class="item__content">
-          <img src="img/Group-1.svg" alt="">
+          <img src="<?php echo get_theme_mod('slicer_cat_menu_cutting-knives') ?>" alt="">
           <span>Ножи разделочные</span>
         </a>
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=hygiene' ?>" class="item__content">
-          <img src="img/Group-2.svg" alt="">
+          <img src="<?php echo get_theme_mod('slicer_cat_hygiene') ?>" alt="">
           <span>Гигиена</span>
         </a>
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=protective-clothing' ?>" class="item__content">
-          <img src="img/Vector-2.svg" alt="">
+          <img src="<?php echo get_theme_mod('slicer_cat_protective-clothing') ?>" alt="">
           <span>Защитная одежда</span>
         </a>
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=grinding' ?>" class="item__content">
-          <img src="img/Group-3.svg" alt="">
+          <img src="<?php echo get_theme_mod('slicer_cat_grinding') ?>" alt="">
           <span>Заточка</span>
         </a>
       </li>

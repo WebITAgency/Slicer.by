@@ -120,30 +120,23 @@ get_header();
        justify-content-center
         justify-content-md-around
         ">
-    <div class="product-item col-10 col-md-5 col-xxl-3">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-    </div>
-
-    <div class="product-item col-10 col-md-5 col-xxl-3">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-    </div>
-
-
-    <div class="product-item col-10 col-md-5 col-xxl-3">
-      <img src="img/A812T 1.png" alt="">
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="product-item__price">Цена договорная</span>
-      <a href="#" class="product-item__btn">Ознакомиться</a>
-    </div>
+        <?php
+    $posts = get_posts(array(
+      'category_name' => 'product-index',
+      'numberposts' => 3,
+    ));
+    foreach ($posts as $post) {
+    ?>
+      <div class="product-item col-10 col-md-5 col-xxl-3">
+        <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+        <h2><?php the_title(); ?></h2>
+        <div class="line"></div>
+        <span class="product-item__price"><?php the_excerpt(); ?></span> 
+        <a href="#" class="product-item__btn">Ознакомиться</a>
+      </div>
+    <?php
+    }
+    ?>
 
   </div>
 
@@ -180,33 +173,6 @@ get_header();
             <?php
           }
         ?>
-   
-
-    <!-- <div class="product-item news-card col-10 col-md-5 col-xxl-3">
-      <div class="news-card__thumb" style="background-image: url(img/newspic.png);"></div>
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="news-card__text">
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat...
-      </span>
-      <a href="#" class="product-item__btn">Читать далее</a>
-    </div>
-
-    <div class="product-item news-card col-10 col-md-5 col-xxl-3">
-      <div class="news-card__thumb" style="background-image: url(img/newspic.png);"></div>
-      <h2>Слайсер SL-228 EV-5</h2>
-      <div class="line"></div>
-      <span class="news-card__text">
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat...
-      </span>
-      <a href="#" class="product-item__btn">Читать далее</a>
-    </div> -->
 
   </div>
 </section>

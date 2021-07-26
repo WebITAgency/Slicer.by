@@ -83,6 +83,92 @@ function slicer_customize_register( $wp_customize ) {
 		'settings' => 'slicer_links_inst_back',
 		'description' => 'Фактический (URL)',
 	)));
+
+	// SLICER CAT MENU
+	$wp_customize->add_section('slicer_cat_menu', array(
+		'title' => 'Меню категорий',
+		'priopity' => 14,
+	));
+	$wp_customize->add_setting('slicer_cat_menu_slicer', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_slicer', array(
+		'label' => 'Слайсеры',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_slicer',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_saws', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_saws', array(
+		'label' => 'Пилы',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_saws',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_cutting-knives', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_cutting-knives', array(
+		'label' => 'Ножи разделочные',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_cutting-knives',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_cutting-knife-eicker', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_cutting-knife-eicker', array(
+		'label' => 'Ножи Eicker',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_cutting-knife-eicker',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_musats', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_musats', array(
+		'label' => 'Мусаты',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_musats',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_protective-clothing', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_protective-clothing', array(
+		'label' => 'Защитная одежда',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_protective-clothing',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_grinding', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_grinding', array(
+		'label' => 'Заточка',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_grinding',
+	)));
+
+	$wp_customize->add_setting('slicer_cat_menu_hygiene', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_hygiene', array(
+		'label' => 'Гигиена',
+		'section' => 'slicer_cat_menu',
+		'settings' => 'slicer_cat_menu_hygiene',
+	)));
+
 };
 add_action( 'customize_register', 'slicer_customize_register' );
 

@@ -221,13 +221,22 @@ get_header();
   <a href="" class="item">Next item</a>
 </div>
 
+<div class="row d-flex justify-content-center">
+    <h2 class="text-center col-12 section-title">
+    <?php 
+    echo get_category_by_slug($_GET['cat'])->name;
+    ?>
+    </h2>
+  </div>
+
 <div class="products__container container d-flex justify-content-center">
   <div class="row d-flex justify-content-around w-100">
 
     <?php 
       $posts = get_posts(array(
         'category_name' => $_GET['cat'],
-      ));
+      )
+      );
       foreach ($posts as $post) {
         ?>
           <div class="product-item col-10 col-md-5 col-xxl-3">
