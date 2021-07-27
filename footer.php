@@ -13,11 +13,17 @@
 
 <footer class="footer">
     <div class="partners">
-      <img src="../img/dick-white 1.png" alt="" class="partners__item">
-      <img src="../img/Giesser_Messer_magazin_posudy_posuda_dlya_restoranov_professionalnaya.png" alt="" class="partners__item">
-      <img src="../img/mainca 1.png" alt="" class="partners__item">
-      <img src="../img/roser-group.png" alt="" class="partners__item">
-      <img src="../img/eicker 1.png" alt="" class="partners__item">
+      <?php
+          $posts = get_posts(array(
+            'category_name' => 'footer-pics',
+            'numberposts' => -1,
+          ));
+          foreach ($posts as $post) {
+            ?>
+              <img src="<?php the_post_thumbnail_url() ?>" alt="" class="partners__item">            
+            <?php
+          }
+      ?>
     </div>
   </footer>
 
@@ -35,12 +41,7 @@
         </div>
       </div>
 
-      <ul class="card__description">
-        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-        <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-      </ul>
+      <p class="card__description"></p>
 
       <div class="card__buttons">
         <a href="#" class="buttons__buy-btn">Подробнее</a>

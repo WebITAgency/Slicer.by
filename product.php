@@ -25,7 +25,7 @@ get_header();
       <div class="col-11 mt-3 mt-md-0 col-md-7 d-flex flex-column">
         <h1 class="product__title"> <?php the_title(); ?> </h1>
         <h2 class="product__price"> <?php the_excerpt() ?> </h2>
-        <a href="#" class="product__button product-item__btn">Заказать</a>
+        <a href="#" style="margin-top: unset" class="product__button product-item__btn">Заказать</a>
       </div>
     </div>
     <div class="row mt-2 mt-md-5 d-flex justify-content-center justify-content-md-start">
@@ -33,12 +33,6 @@ get_header();
         <p class="product__description">
           <?php the_content(); ?>
         </p>
-        <!-- <ul class="card__description">
-          <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-          <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-          <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-          <li class="description__item"><i class="bi bi-dot"></i>Lorem ipsum dolor</li>
-        </ul> -->
       </div>
     </div>
   </section>
