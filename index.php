@@ -133,6 +133,7 @@ get_header();
         <div class="line"></div>
         <span class="product-item__price"><?php the_excerpt(); ?></span> 
         <a href="<?php the_permalink() ?>" class="product-item__btn">Ознакомиться</a>
+        <p class="d-none"><?php echo wp_trim_words( get_the_content(), 20); ?></p>
       </div>
     <?php
     }
