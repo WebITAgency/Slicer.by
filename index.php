@@ -98,7 +98,7 @@ get_header();
         <h2><?php the_title(); ?></h2>
         <div class="line"></div>
         <span class="product-item__price"><?php the_excerpt(); ?></span> 
-        <a href="#" class="product-item__btn">Ознакомиться</a>
+        <a href="<?php the_permalink() ?>" class="product-item__btn">Ознакомиться</a>
         <div class="triangle"><span>ХИТ!</span></div>
       </div>
     <?php
@@ -132,7 +132,7 @@ get_header();
         <h2><?php the_title(); ?></h2>
         <div class="line"></div>
         <span class="product-item__price"><?php the_excerpt(); ?></span> 
-        <a href="#" class="product-item__btn">Ознакомиться</a>
+        <a href="<?php the_permalink() ?>" class="product-item__btn">Ознакомиться</a>
       </div>
     <?php
     }

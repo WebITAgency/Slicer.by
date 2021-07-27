@@ -19,5 +19,8 @@ function showPopup(event){
         popupWindow.querySelector('h2').textContent = event.target.parentElement.querySelector('h2').textContent;
         popupWindow.querySelector('span').textContent = event.target.parentElement.querySelector('span').textContent;
         popupWindow.querySelector('img').setAttribute('src', event.target.parentElement.querySelector('img').getAttribute('src'));
+        //popupWindow.querySelector('').textContent = "ABOBA";
+        let targetHref = event.target.getAttribute('href');
+        popupWindow.querySelector('.popup__card .card__buttons .buttons__buy-btn').setAttribute('href', targetHref);
     }
 }

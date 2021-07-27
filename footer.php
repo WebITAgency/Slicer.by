@@ -30,8 +30,8 @@
       <div class="card__offer">
         <img src="../img/A812T 1.png" alt="">
         <div class="offer__text">
-          <h2>Слайсер SL-228 EV-5</h2>
-          <span>Цена договорная</span>
+          <h2></h2>
+          <span></span>
         </div>
       </div>
 
