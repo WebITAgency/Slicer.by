@@ -177,38 +177,21 @@ get_header();
   </div>
 </section>
 
-<section class="d-flex flex-column container justify-content-start">
+<section id="contacts" class="contacts d-flex flex-column container justify-content-start">
   <div class="row d-flex justify-content-center">
     <h2 class="text-center col-12 section-title">
       Контакты
     </h2>
   </div>
-  <h3 class="contacts__title">
-    ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ВАЛВИТ"
-  </h3>
-  <span class="contacts__subtitle">
-    Наш адрес:
-  </span>
-  <span class="contacts__text">
-    224023, Республика Беларусь, г. Брест, ул. Васнецова 50, офис 8
-  </span>
-  <span class="contacts__subtitle">
-    Банк:
-  </span>
-  <span class="contacts__text">
-    р/с BY45OLMP30123000590040000933 в ОАО "Белгазпромбанк" Брестская областная дирекция"
-    г. Брест, ул. Советской Конституции, 15, код банка OLMPBY2X
-  </span>
-  <span class="contacts__subtitle">
-    Контакты:
-  </span>
-  <span class="contacts__text">
-    <span>тел./факс: +375 162 35 64 45</span>
-    <span>моб.тел.: +375 29 340-05-37</span>
-    <span>е-mail: valvitinfo@tut.by</span>
-    <span>сайт: www.valvit.by, www.slicer.by</span>
-
-  </span>
+  <?php 
+    $posts = get_posts(array(
+      'category_name' => 'contacts',
+      'numberposts' => 1
+    ));
+    foreach ($posts as $post) {
+      the_content();
+    }
+  ?>
   <div class="container-fluid">
     <iframe class="w-100" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.1320393878077!2d27.548209715974792!3d53.89385704125977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf73f6e678a7%3A0x3a381d5362a18cb7!2z0JvQtdC90LjQvdCz0YDQsNC00YHQutCw0Y8gMQ!5e0!3m2!1sru!2sby!4v1626270655913!5m2!1sru!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
