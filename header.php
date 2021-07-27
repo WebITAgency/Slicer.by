@@ -46,9 +46,6 @@
           <input class="header__search-field" placeholder="Поиск" type="search" name="" id="">
           <button class="header__search-submit" type="submit"> <i class="bi bi-search"></i> </button>
         </form>
-        <!-- <div class="header__search d-lg-none">
-          <i class="bi bi-search"></i>
-        </div> -->
         <div class="header__menu d-lg-none">
           <i class="header__menu_icon bi bi-list"></i>
           <div class="header__menu-mobile header__menu-mobile--inactive container-fluid">

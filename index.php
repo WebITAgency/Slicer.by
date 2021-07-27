@@ -163,7 +163,7 @@ get_header();
             ?>
       <div class="product-item news-card col-10 col-md-5 col-xxl-3">
       <a class="news-card__thumb" href="<?php the_permalink() ?>" style="background-image: url(<?php the_post_thumbnail_url() ?>);"></a>
-      <h2><?php the_title() ?></h2>
+      <h2 style="width: 90%;"><?php the_title() ?></h2>
       <div class="line"></div>
       <span class="news-card__text">
         <?php the_excerpt() ?>
