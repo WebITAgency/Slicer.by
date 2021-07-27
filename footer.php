@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <p style="width: 90%" class="card__description"></p>
+      <p style="width: 85%" class="card__description popup__description"></p>
 
       <div class="card__buttons">
         <a href="#" class="buttons__buy-btn">Подробнее</a>

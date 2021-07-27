@@ -97,6 +97,9 @@
       outline: none;
     }
   }
+  &__search-form{
+    position: relative;
+  }
   &__search-submit{
     font-size: 15px;
     cursor: pointer;
@@ -126,4 +129,15 @@
       }
     }
   }
+}
+
+.ajax-search{
+    background-color: #ffffff;
+    width: 199px;
+    height: auto;
+    min-width: auto;
+    position: absolute;
+    top: 29px;
+    left: 15px;
+    padding: 0px;
 }
