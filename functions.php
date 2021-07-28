@@ -240,3 +240,32 @@ function ajax_search()
 }
 add_action('wp_ajax_nopriv_ajax_search', 'ajax_search');
 add_action('wp_ajax_ajax_search', 'ajax_search');
+
+function ajax_search_mobile()
+{
+    $args = array(
+        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи 
+        'post_status'    => 'publish',
+        'order'          => 'DESC',
+        'orderby'        => 'date',
+        's'              => $_POST['term'],
+        'posts_per_page' => -1
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post(); ?>
+            <li class="ajax-search-mobile__item search-mark">
+                <a class="search-mark-mobile" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
+                <div class="ajax-search-mobile__excerpt search-mark"><?php the_excerpt(); ?></div>
+            </li>
+        <?php }
+    } else { ?>
+        <li class="ajax-search-mobile__item search-mark-mobile">
+            <div class="ajax-search-mobile__not-found search-mark-mobile">Ничего не найдено</div>
+        </li>
+<?php }
+    exit;
+};
+add_action('wp_ajax_nopriv_ajax_search_mobile', 'ajax_search_mobile');
+add_action('wp_ajax_ajax_search_mobile', 'ajax_search_mobile');

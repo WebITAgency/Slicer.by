@@ -8,7 +8,7 @@
            placeholder="Поиск"
             type="text"
             autocompete="off"
-            name="aboba" id="">
+            name="search" id="">
           <ul class="ajax-search search-mark"></ul>
         </form>
 
@@ -22,6 +22,6 @@
            placeholder="Поиск"
             type="text"
             autocompete="off"
-            name="aboba" id="">
+            name="search-mobile" id="">
           <ul class="ajax-search-mobile search-mark"></ul>
         </form>
