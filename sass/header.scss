@@ -136,8 +136,36 @@
     width: 199px;
     height: auto;
     min-width: auto;
+    max-height: 200px;
+    overflow-y: scroll;
     position: absolute;
-    top: 29px;
-    left: 15px;
+    top: 28px;
+    left: 14px;
     padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    &__item{
+      padding: 1px 5px 1px 5px;
+      color: $slicer-black;
+    }
+    &__link{
+      color: $slicer-black;
+      // text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300;
+      &:hover{
+        color: $slicer-black;
+        // text-decoration: none;
+      }
+    }
+    
+    &__excerpt{
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300;
+      color: $slicer-light-text;
+      p{
+        margin-bottom: 3px !important;
+      }
+    }
 }

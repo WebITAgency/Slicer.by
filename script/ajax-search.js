@@ -17,11 +17,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 searchResult.innerHTML = results;
             }
         });
+        searchResult.style.display = "flex";
     } else {
-       // searchResult.fadeOut(200);
+       searchResult.style.display = "none";
     }
 });
-
+    document.body.addEventListener('click', (e) => {
+        if(!e.target.classList.contains('search-mark')){
+            searchResult.style.display = "none";
+        }else{
+            searchResult.style.display = "flex";
+        }
+    });
   });
 
 
