@@ -256,7 +256,7 @@ function ajax_search_mobile()
         while ($query->have_posts()) {
             $query->the_post(); ?>
             <li class="ajax-search-mobile__item search-mark">
-                <a class="search-mark-mobile" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
+                <a class="ajax-search-mobile__link search-mark-mobile" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
                 <div class="ajax-search-mobile__excerpt search-mark"><?php the_excerpt(); ?></div>
             </li>
         <?php }

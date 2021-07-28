@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     searchInput.addEventListener('keyup', (e) => {
     let searchValue = e.target.value;
     if(searchValue.length > 2){
-        console.log("AWD");
         $.ajax({
             url: my_ajax_object.ajax_url,
             type: 'POST',
@@ -60,13 +59,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
        searchResult.style.display = "none";
     }
 });
-    document.body.addEventListener('click', (e) => {
-        if(!e.target.classList.contains('search-mark-mobile')){
-            searchResult.style.display = "none";
-        }else{
-            searchResult.style.display = "flex";
-        }
-    });
   });
 
 

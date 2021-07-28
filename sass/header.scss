@@ -205,9 +205,9 @@
   min-width: auto;
   max-height: 200px;
   overflow-y: scroll;
-  position: absolute;
-  top: 28px;
-  left: 14px;
+  // position: absolute;
+  // top: 28px;
+  // left: 14px;
   padding: 0px;
   list-style-type: none;
   display: flex;
@@ -219,10 +219,10 @@
   }
 
   &__link {
-    color: $slicer-black;
-    // text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
+    color: $slicer-black !important;
+    font-size: 18px !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-weight: 300 !important;
 
     &:hover {
       color: $slicer-black;
@@ -234,7 +234,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     color: $slicer-light-text;
-
+    font-size: 14px;
     p {
       margin-bottom: 3px !important;
     }
@@ -244,14 +244,20 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     color: $slicer-light-text;
+    font-size: 14px;
   }
 }
 
 .header-mobile {
+  *{
+    transition: 0.3s all ease;
+  }
   &__search-form {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   &__search-field {
