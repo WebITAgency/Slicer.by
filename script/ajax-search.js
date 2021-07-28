@@ -1,4 +1,7 @@
-console.log(my_ajax_object.ajax_url);
+document.addEventListener("DOMContentLoaded", function(event) { 
+    document.getElementsByClassName('header-mobile__search-form')[0].remove();
+    document.getElementsByClassName('header__search-form')[1].remove();
+});
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     let searchInput = document.querySelector('.header__search-field');

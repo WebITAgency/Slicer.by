@@ -226,14 +226,14 @@ function ajax_search()
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post(); ?>
-            <li class="ajax-search__item">
-                <a href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
-                <div class="ajax-search__excerpt"><?php the_excerpt(); ?></div>
+            <li class="ajax-search__item search-mark">
+                <a class="search-mark" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
+                <div class="ajax-search__excerpt search-mark"><?php the_excerpt(); ?></div>
             </li>
         <?php }
     } else { ?>
-        <li class="ajax-search__item">
-            <div class="ajax-search__not-found">Ничего не найдено</div>
+        <li class="ajax-search__item search-mark">
+            <div class="ajax-search__not-found search-mark">Ничего не найдено</div>
         </li>
 <?php }
     exit;

@@ -42,20 +42,20 @@
         )); ?>
       </div>
       <div class="col d-flex justify-content-end align-items-center p-0">
-        <?php get_search_form(); ?>
+        <?php get_search_form(array(
+          'aria_label' => 'desktop',
+        )); ?>
         <div class="header__menu d-lg-none">
           <i class="header__menu_icon bi bi-list"></i>
           <div class="header__menu-mobile header__menu-mobile--inactive container-fluid">
-            <ul class="d-flex w-100 flex-column list-unstyled align-items-center justify-content-center container">
-              <li><a href="#"> Контакты </a></li>
-              <li><a href="#"> Каталог </a></li>
-              <li><a href="#"> ВАЛВИТ </a></li>
-              <form class="mt-4 header__search-form">
-                <input class="header__search-field" placeholder="Поиск" type="search" name="" id="">
-                <button class="header__search-submit" type="submit"> <i class="bi bi-search"></i> </button>
-              </form>
-            </ul>
-
+            <?php wp_nav_menu(array(
+            'theme_location'=> 'header-menu',
+            'container'=>'',
+            'items_wrap' => '<ul class="d-flex w-100 flex-column list-unstyled align-items-center justify-content-center container">%3$s</ul>',
+        )); ?>
+        <?php get_search_form(array(
+          'aria_label' => 'mobile',
+        )); ?>
           </div>
         </div>
       </div>

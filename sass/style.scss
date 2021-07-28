@@ -11,7 +11,7 @@
 button {
   border: none;
 }
- 
+
 body {
   min-width: 375px;
   background-color: $slicer-page-background !important;
@@ -137,9 +137,10 @@ body {
   font-size: 14px;
   transition: all 0.3s ease;
 
-  &:hover{
+  &:hover {
     color: $slicer-highlight;
   }
+
   @media screen and (min-width: $breakpoint-md) {
     margin-top: 25px;
     font-size: 18px;
@@ -234,36 +235,38 @@ body {
   }
 }
 
-.contacts{
-    & h3{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 24px;
-      font-weight: 500;
-      color: $slicer-black;
-      text-align: left;
-      margin-bottom: 25px;
-      max-width: 700px;
-    }
-    & h4{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      color: $slicer-red;
-      text-align: left;
-      margin-bottom: 10px;
-      max-width: 700px;
-    }
-    & span{
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 200;
-      color: $slicer-light-text;
-      text-align: left;
-      margin-bottom: 25px;
-      max-width: 700px;
-      display: flex;
-      flex-direction: column;
-    }
+.contacts {
+  & h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: $slicer-black;
+    text-align: left;
+    margin-bottom: 25px;
+    max-width: 700px;
+  }
+
+  & h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: $slicer-red;
+    text-align: left;
+    margin-bottom: 10px;
+    max-width: 700px;
+  }
+
+  & span {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: $slicer-light-text;
+    text-align: left;
+    margin-bottom: 25px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer {
@@ -273,6 +276,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
+
   .partners {
     width: 100%;
     display: flex;
@@ -377,7 +381,7 @@ body {
 
 
 
-.triangle{
+.triangle {
   position: absolute;
   top: -80px;
   left: -80px;
@@ -385,7 +389,8 @@ body {
   height: 150px;
   background-color: $slicer-highlight;
   transform: rotateZ(45deg);
-  span{
+
+  span {
     display: inline-block;
     font-size: 25px;
     color: $slicer-background;
