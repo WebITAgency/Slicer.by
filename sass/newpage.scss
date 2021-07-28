@@ -24,7 +24,7 @@
     line-height: 32px;
     letter-spacing: 0em;
     color: $slicer-red-dark;
-    margin: 25px 15px;
+    margin: 50px 15px 20px 15px;
 
     @media screen and (min-width: $breakpoint-md) {
       font-size: 30px;
@@ -106,7 +106,7 @@
   font-family: Nunito Sans;
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 25px;
   margin: 10px 15px 25px 15px;
   transition: all 0.2s ease-in-out;
