@@ -38,10 +38,10 @@ function showCategories(event) {
 
 let menuItems = document.querySelectorAll('.catalog__item');
 
-for (let i = 0; i < menuItems.length; i++){
-  menuItems[i].addEventListener('click', function(event){
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener('click', function(event) {
     console.log(menuItems[i].querySelector('.item__sub-menu').style.display);
-    if (menuItems[i].querySelector('.item__sub-menu').style.display == 'none'){
+    if (menuItems[i].querySelector('.item__sub-menu').style.display == 'none') {
       menuItems[i].querySelector('.item__sub-menu').style.display == 'flex';
       menuItems[i].querySelector('.item__sub-menu').style.zIndex = '100000';
     } else {
