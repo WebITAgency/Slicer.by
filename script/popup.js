@@ -25,3 +25,4 @@ function showPopup(event){
         popupWindow.querySelector('.popup__card .card__buttons .buttons__buy-btn').setAttribute('href', targetHref);
     }
 }
+

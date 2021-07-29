@@ -1,0 +1,94 @@
+@import "var.scss";
+
+.feedback__title{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 0 0;
+    h2{
+        color: $slicer-black;
+        font-size: 36px;
+        font-family: Ubuntu;
+        font-weight: 300;
+        @media screen and (max-width: $brakepoint-sm){
+            font-size: 22px;
+        }
+    }
+}
+
+.feedback{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .form__success{
+        width: 100%;
+        height: 100vh;
+        z-index: 100000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        .success__content{
+            background-color: #198754;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            i{
+                font-size: 40px;
+                color: $slicer-background;
+                margin-right: 25px;
+            }
+            span{
+                font-size: 22px;
+                font-weight: 300;
+                font-family: Ubuntu;
+                color: $slicer-background;
+            }
+        }
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+
+        input{
+            margin: 0;
+            padding: 0;
+            width: 48%;
+            background-color: none;
+            font-size: 20px;
+            color: $slicer-black;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 15px;
+            font-family: Ubuntu;
+        }
+        textarea{
+            width: 65%;
+            margin-top: 30px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 15px;
+        }
+        .form__block1, .form__block2{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .form__btn{
+            margin-top: 30px;
+            width: 200px;
+            @include btn;
+            &:hover{
+                background-color: $slicer-highlight;
+            }
+        }
+    }
+}
