@@ -13,6 +13,9 @@ document.addEventListener('click', showPopup);
 
 function showPopup(event){
     if (event.target.classList.contains('product-item__btn')){
+        if(event.target.parentElement.classList.contains('news-card')){
+            return;
+        }
         event.preventDefault();
         popupWindow.style.display = 'flex';
         document.body.style.overflowY = 'hidden';
