@@ -162,10 +162,10 @@ function slicer_scripts() {
 add_action( 'wp_enqueue_scripts', 'slicer_scripts' );
 
 function additional_custom_styles() {
-    wp_enqueue_style( 'uniquestylesheetid', get_template_directory_uri() . '/css/style.css' ); 
-    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' ); 
-    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.theme.min.css' ); 
-    
+    wp_enqueue_style( 'uniquestylesheetid', get_template_directory_uri() . '/css/style.css' );
+    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.core.min.css' );
+    wp_enqueue_style( 'slicer-glide', get_template_directory_uri() . '/node_modules/@glidejs/glide/dist/css/glide.theme.min.css' );
+
 }
 add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
 
@@ -207,7 +207,9 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function my_enqueue() {
 	wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/script/ajax-search.js', array() , true);
-	wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+	wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
+	wp_enqueue_script( 'ajax-feedback', get_template_directory_uri() . '/script/ajax-feedback.js', '','',true);
+	wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue' );
 
@@ -215,7 +217,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
 function ajax_search()
 {
     $args = array(
-        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи 
+        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи
         'post_status'    => 'publish',
         'order'          => 'DESC',
         'orderby'        => 'date',
@@ -244,7 +246,7 @@ add_action('wp_ajax_ajax_search', 'ajax_search');
 function ajax_search_mobile()
 {
     $args = array(
-        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи 
+        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи
         'post_status'    => 'publish',
         'order'          => 'DESC',
         'orderby'        => 'date',
@@ -269,3 +271,10 @@ function ajax_search_mobile()
 };
 add_action('wp_ajax_nopriv_ajax_search_mobile', 'ajax_search_mobile');
 add_action('wp_ajax_ajax_search_mobile', 'ajax_search_mobile');
+
+function ajax_feedback()
+{
+
+}
+add_action('wp_ajax_nopriv_ajax_feedback', 'ajax_feedback');
+add_action('wp_ajax_ajax_feedback', 'ajax_feedback');
