@@ -1,4 +1,5 @@
 <form
+    style="display: none !important;"
     role="search"
     method="get"
     aria-label="desktop"
@@ -13,6 +14,7 @@
         </form>
 
  <form
+    style="display: none !important;"
     role="search"
     method="get"
     aria-label="mobile"

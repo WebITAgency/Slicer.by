@@ -24,6 +24,15 @@ function slicer_customize_register( $wp_customize ) {
 		"section" => "slicer_identic",
 		'settings' => 'slicer_identic_logo',
 	)));
+	$wp_customize->add_setting('slicer_identic_favicon', array(
+		'default' => '',
+		'transport' => 'postMessage',
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_identic_favicon', array(
+		'label' => 'Иконка вкладки',
+		'section' => 'slicer_identic',
+		'settings' => 'slicer_identic_favicon',
+	)));
 
 	$wp_customize->add_section('slicer_view', array(
 		'title' => 'Оформление',

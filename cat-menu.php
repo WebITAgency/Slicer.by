@@ -27,7 +27,7 @@
         <span>Пилы</span>
       </a>
 
-      <ul class="item__sub-menu">
+      <ul class="item__sub-menu"> 
         <li class="sub-menu__item">
           <a href="#" class="sub-menu__link">Ленточные</a>
         </li>
@@ -166,7 +166,7 @@
 
   <div class="catalog-container__btn-container"><a href="#" class="btn-container__button categories-btn"><i class="bi bi-arrow-down-short"></i><span>Все категории</span></a>
 
-    <ul class="catalog-container__catalog push-menu">
+    <ul style="display: none;" class="catalog-container__catalog push-menu">
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=cutting-knives' ?>" class="item__content">
           <img src="<?php echo get_theme_mod('slicer_cat_menu_cutting-knives') ?>" alt="">

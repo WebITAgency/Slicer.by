@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
+    document.getElementsByClassName('header-mobile__search-form')[1]
+    .style.display = 'flex';
     document.getElementsByClassName('header-mobile__search-form')[0].remove();
+    document.getElementsByClassName('header__search-form')[0]
+    .style.display = 'flex';
     document.getElementsByClassName('header__search-form')[1].remove();
 });
 

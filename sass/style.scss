@@ -20,6 +20,10 @@ body {
   padding-bottom: 200px;
 }
 
+.over-f-hidden{
+  overflow-y: hidden !important;
+}
+
 .open {
   display: flex;
 }
