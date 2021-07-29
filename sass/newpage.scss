@@ -37,7 +37,7 @@
   }
 
   p {
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
@@ -70,7 +70,7 @@
       padding: 0;
       display: flex;
       color: $slicer-light-text;
-      font-family: Nunito Sans;
+      font-family: 'Nunito Sans', sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 12px;
@@ -103,7 +103,7 @@
 
 .info__link {
   color: $slicer-light-text;
-  font-family: Nunito Sans;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -150,7 +150,7 @@
 
   .recommendation__link {
     margin: 15px 0;
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;

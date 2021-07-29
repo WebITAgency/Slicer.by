@@ -50,7 +50,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Nunito Sans;
+      font-family: 'Nunito Sans', sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -214,29 +214,31 @@ body {
   background-color: $slicer-page-background;
 
   .products__navigation {
-    margin: 30px 0;
+    i:last-child{
+      display: none;
+    }
+    margin: 20px 0;
     display: flex;
     justify-content: center;
-
-    .item {
-      font-family: Nunito Sans;
+    opacity: 0.7;
+    font-family: 'Nunito Sans', sans-serif;
       font-size: 14px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 19px;
       letter-spacing: 0em;
-      text-decoration: underline;
+      // text-decoration: underline;
       color: $slicer-black;
       transition: all 0.3s linear;
 
-      &:hover {
-        color: $slicer-highlight;
-      }
+      // &:hover {
+      //   color: $slicer-highlight;
+      // }
 
       @media screen and (min-width: $breakpoint-xl) {
         font-size: 20px;
       }
-    }
+    
 
     .arrow {
       font-size: 15px;

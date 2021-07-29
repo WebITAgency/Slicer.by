@@ -16,11 +16,16 @@ get_header();
 
 <div class="products">
 <div class="products__navigation">
-  <a href="#" class="item">All</a>
+  <!-- <a href="#" class="item">All</a>
   <i class="bi bi-arrow-right arrow"></i>
   <a href="#" class="item">Next item</a>
   <i class="bi bi-arrow-right arrow"></i>
-  <a href="" class="item">Next item</a>
+  <a href="" class="item">Next item</a> -->
+  <?php echo get_category_parents(
+     get_category_by_slug( $_GET['cat'] ),
+     false,
+     ' <i class="bi bi-arrow-right arrow"></i> '
+  ); ?> 
 </div>
 
 <div class="row d-flex justify-content-center">
