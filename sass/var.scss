@@ -40,8 +40,8 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
 
-@mixin heading{
-  font-family: Nunito Sans;
+@mixin heading {
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;

@@ -10,7 +10,7 @@
 
     @media screen and (min-width: $breakpoint-xl) {
       width: 768px;
-      height: 466px;
+      //height: 466px;
       margin-left: 15px;
       order: 3;
     }
@@ -37,23 +37,23 @@
   }
 
   p {
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
     text-align: left;
     color: $slicer-light-text;
-    margin: 0 15px 20px 15px;
+    margin: 15px 15px 20px 15px;
 
     @media screen and (min-width: $breakpoint-md) {
-      font-size: 20px;
+      font-size: 15px;
     }
 
     @media screen and (min-width: $breakpoint-xl) {
-      font-size: 26px;
+      font-size: 18px;
       margin-right: 250px;
       order: 4;
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
 
@@ -70,7 +70,7 @@
       padding: 0;
       display: flex;
       color: $slicer-light-text;
-      font-family: Nunito Sans;
+      font-family: 'Nunito Sans', sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 12px;
@@ -103,7 +103,7 @@
 
 .info__link {
   color: $slicer-light-text;
-  font-family: Nunito Sans;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -116,11 +116,11 @@
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   @media screen and (min-width: $breakpoint-xl) {
-    font-size: 28px;
+    font-size: 18px;
     order: 2;
 
     &:hover {
@@ -142,14 +142,15 @@
     @media screen and (min-width: $breakpoint-md) {
       font-size: 36px;
     }
-    @media screen and (min-width: $breakpoint-xl){
+
+    @media screen and (min-width: $breakpoint-xl) {
       font-size: 48px;
     }
   }
 
   .recommendation__link {
     margin: 15px 0;
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;

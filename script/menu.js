@@ -9,7 +9,7 @@ let menuToggle = () => {
   $menu.classList.toggle('header__menu-mobile--active');
   $burgerBtn.classList.toggle('bi-x');
   $burgerBtn.classList.toggle('bi-list');
-  isMenuActive = !isMenuActive;
+  document.querySelector('body').classList.toggle('over-f-hidden');
 }
 
 $burgerBtn.addEventListener('click', menuToggle);

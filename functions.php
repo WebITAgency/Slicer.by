@@ -206,7 +206,7 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function my_enqueue() {
-	wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/script/ajax-search.js', array() );
+	wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/script/ajax-search.js', array() , true);
 	wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue' );
@@ -226,17 +226,46 @@ function ajax_search()
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post(); ?>
-            <li class="ajax-search__item">
-                <a href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
-                <div class="ajax-search__excerpt"><?php the_excerpt(); ?></div>
+            <li class="ajax-search__item search-mark">
+                <a class="search-mark" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
+                <div class="ajax-search__excerpt search-mark"><?php the_excerpt(); ?></div>
             </li>
         <?php }
     } else { ?>
-        <li class="ajax-search__item">
-            <div class="ajax-search__not-found">Ничего не найдено</div>
+        <li class="ajax-search__item search-mark">
+            <div class="ajax-search__not-found search-mark">Ничего не найдено</div>
         </li>
 <?php }
     exit;
 }
 add_action('wp_ajax_nopriv_ajax_search', 'ajax_search');
 add_action('wp_ajax_ajax_search', 'ajax_search');
+
+function ajax_search_mobile()
+{
+    $args = array(
+        'post_type'      => 'any', // Тип записи: post, page, кастомный тип записи 
+        'post_status'    => 'publish',
+        'order'          => 'DESC',
+        'orderby'        => 'date',
+        's'              => $_POST['term'],
+        'posts_per_page' => -1
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post(); ?>
+            <li class="ajax-search-mobile__item search-mark">
+                <a class="ajax-search-mobile__link search-mark-mobile" href="<?php the_permalink(); ?>" class="ajax-search__link"><?php the_title(); ?></a>
+                <div class="ajax-search-mobile__excerpt search-mark"><?php the_excerpt(); ?></div>
+            </li>
+        <?php }
+    } else { ?>
+        <li class="ajax-search-mobile__item search-mark-mobile">
+            <div class="ajax-search-mobile__not-found search-mark-mobile">Ничего не найдено</div>
+        </li>
+<?php }
+    exit;
+};
+add_action('wp_ajax_nopriv_ajax_search_mobile', 'ajax_search_mobile');
+add_action('wp_ajax_ajax_search_mobile', 'ajax_search_mobile');

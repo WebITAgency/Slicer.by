@@ -30,7 +30,7 @@
     padding-left: 20px;
     padding-bottom: 30px;
 
-    
+
 
     @media screen and (min-width: $breakpoint-xl) {
       width: 425px;
@@ -84,7 +84,7 @@
         }
 
         span {
-          font-family: Nunito Sans;
+          font-family: 'Nunito Sans', sans-serif;
           font-style: normal;
           font-weight: 300;
           font-size: 18px;
@@ -103,7 +103,7 @@
       padding: 0;
 
       .description__item {
-        font-family: Nunito Sans;
+        font-family: 'Nunito Sans', sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 12px;
@@ -134,7 +134,7 @@
       .buttons__buy-btn,
       .buttons__more-btn {
         display: flex;
-        font-family: Nunito Sans;
+        font-family: 'Nunito Sans', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -178,6 +178,6 @@
 }
 
 
-.popup__dercription{
+.popup__dercription {
   color: red;
 }
