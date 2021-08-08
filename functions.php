@@ -274,7 +274,18 @@ add_action('wp_ajax_ajax_search_mobile', 'ajax_search_mobile');
 
 function ajax_feedback()
 {
+	$name = $_POST['term']['name'];
+	$patronymic = $_POST['term']['patronymic'];
+	$phonenumber = $_POST['term']['phonenumber'];
+	$email = $_POST['term']['email'];
+	$comment = $_POST['term']['comment'];
 
+	$response =
+	"Новая заявка на обратную звязь! \n" . 
+	$name . " " . $patronymic . " " . $phonenumber . " " . $email . " " . $comment;
+
+	mail('test@test.com', 'me@test.com', $response, 'Новая заявка на обратную звязь!');
+	exit;
 }
 add_action('wp_ajax_nopriv_ajax_feedback', 'ajax_feedback');
 add_action('wp_ajax_ajax_feedback', 'ajax_feedback');
