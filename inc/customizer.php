@@ -139,7 +139,7 @@ function slicer_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting('slicer_cat_menu_musats', array(
-		'default' => '',
+		//'default' => '',
 		'transport' => 'postMessage',
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_musats', array(
@@ -149,8 +149,8 @@ function slicer_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting('slicer_cat_menu_protective-clothing', array(
-		'default' => '',
-		'transport' => 'postMessage',
+		// 'default' => 'awdawd',
+		//'transport' => 'postMessage',
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_protective-clothing', array(
 		'label' => 'Защитная одежда',
@@ -159,8 +159,8 @@ function slicer_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting('slicer_cat_menu_grinding', array(
-		'default' => '',
-		'transport' => 'postMessage',
+		//'default' => '',
+		//'transport' => 'postMessage',
 	));
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slicer_cat_menu_grinding', array(
 		'label' => 'Заточка',

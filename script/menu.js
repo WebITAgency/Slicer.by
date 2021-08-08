@@ -22,7 +22,6 @@ let $categories = document.querySelector('.push-menu');
 $categoriesBtn.addEventListener('click', showCategories);
 
 function showCategories(event) {
-  event.preventDefault();
   if ($categories.style.display === 'none') {
     $categories.style.display = 'flex';
     $categoriesBtn.querySelector('i').classList.remove('bi-arrow-down-short');

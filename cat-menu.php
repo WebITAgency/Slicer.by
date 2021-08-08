@@ -124,7 +124,7 @@
       </ul>
     </li>
     <li class="catalog__item">
-      <a href="#" class="item__content">
+      <a href="<?php echo get_home_url() . '/products?cat=hygiene' ?>" class="item__content">
         <img src="<?php echo get_theme_mod('slicer_cat_menu_hygiene') ?>" alt="">
         <span>Гигиена</span>
       </a>
@@ -136,8 +136,8 @@
       </ul>
     </li>
     <li class="catalog__item">
-      <a href="<?php echo get_home_url() . '/products?cat=musats' ?>" class="item__content">
-        <img src="<?php echo get_theme_mod('slicer_cat_menu_protective-clothing') ?>" alt="">
+      <a href="<?php echo get_home_url() . '/products?cat=musats'; ?>" class="item__content">
+      <img src="<?php echo get_theme_mod('slicer_cat_menu_protective-clothing') ?>" alt="">
         <span>Защитная одежда</span>
       </a>
 
@@ -164,7 +164,7 @@
     </li>
   </ul>
 
-  <div class="catalog-container__btn-container"><a href="#" class="btn-container__button categories-btn"><i class="bi bi-arrow-down-short"></i><span>Все категории</span></a>
+  <div class="catalog-container__btn-container"><a class="btn-container__button categories-btn"><i class="bi bi-arrow-down-short"></i><span>Все категории</span></a>
 
     <ul style="display: none;" class="catalog-container__catalog push-menu">
       <li class="catalog__item">
@@ -175,19 +175,22 @@
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=hygiene' ?>" class="item__content">
-          <img src="<?php echo get_theme_mod('slicer_cat_hygiene') ?>" alt="">
+          <img src="<?php echo get_theme_mod('slicer_cat_menu_hygiene') ?>" alt="">
+          <!-- aboba -->
           <span>Гигиена</span>
         </a>
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=protective-clothing' ?>" class="item__content">
-          <img src="<?php echo get_theme_mod('slicer_cat_protective-clothing') ?>" alt="">
+        <!-- aboba -->
+          <img src="<?php echo get_theme_mod('slicer_cat_menu_protective-clothing') ?>" alt="">
           <span>Защитная одежда</span>
         </a>
       </li>
       <li class="catalog__item">
         <a href="<?php echo get_home_url() . '/products?cat=grinding' ?>" class="item__content">
-          <img src="<?php echo get_theme_mod('slicer_cat_grinding') ?>" alt="">
+        <!-- aboba -->
+          <img src="<?php echo get_theme_mod('slicer_cat_menu_grinding') ?>" alt="">
           <span>Заточка</span>
         </a>
       </li>
@@ -197,3 +200,5 @@
 
 
 </div>
+
+<?php echo get_theme_mod('slicer_cat_protective-clothing') ?>
